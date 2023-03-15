@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 public class XLPack {
     [DllImport("xlpack.dll", EntryPoint = "?ApplyPatchPak@@YA_NPBD0@Z", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
     public static extern bool ApplyPatchPak([MarshalAs(UnmanagedType.LPStr)] string to, [MarshalAs(UnmanagedType.LPStr)] string pathToPak);
-    
+
     [DllImport("xlpack.dll", EntryPoint = "?Copy@@YA_NPBD0@Z", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
     public static extern bool Copy([MarshalAs(UnmanagedType.LPStr)] string from, [MarshalAs(UnmanagedType.LPStr)] string to);
 
@@ -16,12 +16,13 @@ public class XLPack {
     [DllImport("xlpack.dll", EntryPoint = "?CreateFileSystem@@YA_NXZ", CallingConvention = CallingConvention.Cdecl)]
     public static extern bool CreateFileSystem();
 
-    //?CreatePak@@YA_NPBD_N@Z
+    [DllImport("xlpack.dll", EntryPoint = "?CreatePak@@YA_NPBD_N@Z", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
+    public static extern bool CreatePak([MarshalAs(UnmanagedType.LPStr)] string to, [MarshalAs(UnmanagedType.Bool)] bool unk);
 
     //?DeleteDir@@YA_NPBD@Z
-    
+
     //?DeleteList@@YA_NPBD0@Z
-    
+
     [DllImport("xlpack.dll", EntryPoint = "?DestroyFileSystem@@YAXXZ", CallingConvention = CallingConvention.Cdecl)]
     public static extern void DestroyFileSystem();
 
@@ -68,7 +69,7 @@ public class XLPack {
     //?MergePatchDeletedList@@YAXPBD0@Z
 
     [DllImport("xlpack.dll", EntryPoint = "?Mount@@YAPAXPBD0_N@Z", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
-    public static extern IntPtr Mount([MarshalAs(UnmanagedType.LPStr)] string where, [MarshalAs(UnmanagedType.LPStr)] string which, [MarshalAs(UnmanagedType.Bool)] bool editable);
+    public static extern IntPtr Mount([MarshalAs(UnmanagedType.LPStr)] string where, [MarshalAs(UnmanagedType.LPStr)] string which, [MarshalAs(UnmanagedType.Bool)] bool compress);
 
     //?ReadableLength@@YA_JPAUFile@@@Z
 

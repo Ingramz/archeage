@@ -1,87 +1,369 @@
-﻿if (args.Length < 2) {
-    Console.Error.WriteLine($"Usage: <game_directory> <patch_pak>");
-    Environment.Exit(0);
-}
+﻿using System.CommandLine;
 
-string gameFolderStr = args[0];
-string patchPakStr = args[1];
+var rootCommand = new RootCommand(@"Utility for performing operations with ArcheAge pak files.
 
-string gameFolder = Path.GetFullPath(gameFolderStr);
-string gamePakStr = Path.Join(gameFolder, "game_pak");
-string gamePak = Path.GetFullPath(gamePakStr);
-string patchPak = Path.GetFullPath(patchPakStr);
+https://github.com/Ingramz/aapatcher
 
-if (!Directory.Exists(gameFolder)) {
-    Console.Error.WriteLine($"game directory '{gameFolder}' does not exist.");
-    Environment.Exit(1);
-}
+Copyright (c) 2022 Indrek 'Ingram' Ardel
+Source code is licensed under the MIT License.");
 
-if (!File.Exists(gamePak)) {
-    Console.Error.WriteLine($"game pak not found at path '{gamePak}'");
-    Environment.Exit(1);
-}
+var MakePatchCommand = () => {
+    var patchCommand = new Command("patch", "Apply a patch pak");
+    var gameDirectoryArgument = new Argument<DirectoryInfo>(
+        name: "game directory",
+        description: "Path to game directory containing game_pak"
+    );
+    patchCommand.AddArgument(gameDirectoryArgument);
 
-if (!File.Exists(patchPak)) {
-    Console.Error.WriteLine($"patch pak not found at path '{patchPak}'");
-    Environment.Exit(1);
-}
+    var patchPakArgument = new Argument<FileInfo>(
+        name: "patch pak",
+        description: "Path to patch pak"
+    );
 
-if (FileUtil.IsFileLocked(gamePak)) {
-    Console.Error.WriteLine($"game pak '{gamePak}' is being used by another process.");
-    Environment.Exit(1);
-}
+    patchCommand.AddArgument(patchPakArgument);
 
-Action<string, Func<bool>> step = (text, func) =>
-{
-    Console.Write($"{text}... ");
-    bool result = func();
-    Console.WriteLine(result ? "SUCCESS" : "FAILURE");
-    
-    if (!result) {
-        Environment.Exit(1);
-    }
+    var extractOption = new Option<bool>(
+        name: "--extract",
+        description: "Extract executables after patching"
+    );
+
+    patchCommand.AddOption(extractOption);
+
+    patchCommand.SetHandler((DirectoryInfo gameDirectory, FileInfo patchPak, bool extract) => {
+        Patch(gameDirectory, patchPak, extract);
+    }, gameDirectoryArgument, patchPakArgument, extractOption);
+
+    return patchCommand;
 };
 
-Dictionary<string, IntPtr> handles = new Dictionary<string, IntPtr>();
+rootCommand.AddCommand(MakePatchCommand());
 
-step("Creating temporary file system", () => XLPack.CreateFileSystem());
+var MakeInstallCommand = () => {
+    var installCommand = new Command("install", "Extract executable files from game_pak");
 
-step($"Mounting '{gamePak}' to /master", () => {
-    IntPtr handle = XLPack.Mount("/master", gamePak, true);
-    
-    handles["master"] = handle;
-    
-    return handle != IntPtr.Zero;
-});
+    var gameDirectoryArgument = new Argument<DirectoryInfo>(
+        name: "game directory",
+        description: "Path to game directory containing game_pak"
+    );
 
-step($"Applying '{patchPak} to /master'", () => XLPack.ApplyPatchPak("/master", patchPak));
+    installCommand.AddArgument(gameDirectoryArgument);
 
-step("Unmounting '/master'", () => XLPack.Unmount(handles["master"]));
+    installCommand.SetHandler((DirectoryInfo gameDirectory) => {
+        Install(gameDirectory);
+    }, gameDirectoryArgument);
 
-step($"Mounting '{gamePak}' to /src", () => {
-    IntPtr handle = XLPack.Mount("/src", gamePak, true);
-    
-    handles["src"] = handle;
-    
-    return handle != IntPtr.Zero;
-});
+    return installCommand;
+};
 
-step($"Mounting '{gameFolder}' to /dst", () => {
-    IntPtr handle = XLPack.Mount("/dst", gameFolder + @"\", true);
-    
-    handles["dst"] = handle;
-    
-    return handle != IntPtr.Zero;
-});
+rootCommand.AddCommand(MakeInstallCommand());
 
-step($"Copying directory 'src/bin32' to 'dst/bin32'", () => XLPack.CopyDir("src/bin32", "dst/bin32"));
-step($"Copying directory 'src/bin64' to 'dst/bin64'", () => XLPack.CopyDir("src/bin64", "dst/bin64"));
-step($"Copying directory 'src/easyanticheat' to 'dst/easyanticheat'", () => XLPack.CopyDir("src/easyanticheat", "dst/easyanticheat"));
-step($"Copying file 'src/launch_game.exe' to 'dst/launch_game.exe'", () => XLPack.Copy("src/launch_game.exe", "dst/launch_game.exe"));
+var MakeUnpackCommand = () => {
+    var unpackCommand = new Command("unpack", "Unpack files from pak");
+    var pakArgument = new Argument<FileInfo>(
+        name: "pak",
+        description: "Path to pak"
+    );
+    unpackCommand.AddArgument(pakArgument);
 
-step("Unmounting '/src'", () => XLPack.Unmount(handles["src"]));
-step("Unmounting '/dst'", () => XLPack.Unmount(handles["dst"]));
-step("Destroying temporary file system", () => {
-    XLPack.DestroyFileSystem();
-    return true;
-});
+    var destinationArgument = new Argument<DirectoryInfo>(
+        name: "destination",
+        description: "Destionation where to extract the files"
+    );
+
+    unpackCommand.AddArgument(destinationArgument);
+
+    unpackCommand.SetHandler((pak, destination) => {
+        Unpack(pak, destination);
+    }, pakArgument, destinationArgument);
+
+    return unpackCommand;
+};
+
+rootCommand.AddCommand(MakeUnpackCommand());
+
+var MakeCreateCommand = () => {
+    var createCommand = new Command("create", "Create a pak");
+    var pakArgument = new Argument<FileInfo>(
+        name: "pak",
+        description: "Path to pak"
+    );
+    createCommand.AddArgument(pakArgument);
+
+    var rootArgument = new Argument<DirectoryInfo>(
+        name: "root",
+        description: "Path to root of files"
+    );
+    createCommand.AddArgument(rootArgument);
+
+    createCommand.SetHandler((pak, root) => {
+        Create(pak, root);
+    }, pakArgument, rootArgument);
+
+    return createCommand;
+};
+
+rootCommand.AddCommand(MakeCreateCommand());
+
+return await rootCommand.InvokeAsync(args);
+
+static void Create(FileInfo pakFi, DirectoryInfo rootDirectoryFi) {
+    string pak = Path.GetFullPath(pakFi.FullName);
+    string rootDirectory = Path.GetFullPath(rootDirectoryFi.FullName);
+
+    if (File.Exists(pak)) {
+        Console.Error.WriteLine($"pak file '{pak}' already exists.");
+        Environment.Exit(1);
+    }
+
+    if (!Directory.Exists(rootDirectory)) {
+        Console.Error.WriteLine($"Root directory '{rootDirectory}' does not exist.");
+        Environment.Exit(1);
+    }
+
+    Dictionary<string, IntPtr> handles = new Dictionary<string, IntPtr>();
+
+    Action<string, Func<bool>> step = (text, func) =>
+    {
+        Console.Write($"{text}... ");
+        bool result = func();
+        Console.WriteLine(result ? "SUCCESS" : "FAILURE");
+
+        if (!result) {
+            Environment.Exit(1);
+        }
+    };
+
+    step($"Creating temporary file system", () => XLPack.CreateFileSystem());
+
+    step($"Creating pak file '{pak}'", () => XLPack.CreatePak(pak, false));
+
+    step($"Mounting '{pak}' to /pak", () => {
+        IntPtr handle = XLPack.Mount("/pak", pak, true);
+
+        handles["pak"] = handle;
+
+        return handle != IntPtr.Zero;
+    });
+
+    step($"Mounting '{rootDirectory}' to /dir", () => {
+        IntPtr handle = XLPack.Mount("/dir", rootDirectory + @"\", true);
+
+        handles["dir"] = handle;
+
+        return handle != IntPtr.Zero;
+    });
+
+    step($"Copying directory '/dir' to '/pak'", () => XLPack.CopyDir("/dir", "/pak"));
+
+    step("Unmounting '/dir'", () => XLPack.Unmount(handles["dir"]));
+    step("Unmounting '/pak'", () => XLPack.Unmount(handles["pak"]));
+
+    step("Destroying temporary file system", () => {
+        XLPack.DestroyFileSystem();
+        return true;
+    });
+}
+
+static void Patch(DirectoryInfo gameDirectoryFi, FileInfo patchPakFi, bool extract) {
+    string gameFolder = Path.GetFullPath(gameDirectoryFi.FullName);
+    string gamePakStr = Path.Join(gameFolder, "game_pak");
+    string gamePak = Path.GetFullPath(gamePakStr);
+    string patchPak = Path.GetFullPath(patchPakFi.FullName);
+
+    if (!Directory.Exists(gameFolder)) {
+        Console.Error.WriteLine($"game directory '{gameFolder}' does not exist.");
+        Environment.Exit(1);
+    }
+
+    if (!File.Exists(gamePak)) {
+        Console.Error.WriteLine($"game pak not found at path '{gamePak}'");
+        Environment.Exit(1);
+    }
+
+    if (!File.Exists(patchPak)) {
+        Console.Error.WriteLine($"patch pak not found at path '{patchPak}'");
+        Environment.Exit(1);
+    }
+
+    if (FileUtil.IsFileLocked(gamePak)) {
+        Console.Error.WriteLine($"game pak '{gamePak}' is being used by another process.");
+        Environment.Exit(1);
+    }
+
+    Action<string, Func<bool>> step = (text, func) =>
+    {
+        Console.Write($"{text}... ");
+        bool result = func();
+        Console.WriteLine(result ? "SUCCESS" : "FAILURE");
+
+        if (!result) {
+            Environment.Exit(1);
+        }
+    };
+
+    Dictionary<string, IntPtr> handles = new Dictionary<string, IntPtr>();
+
+    step("Creating temporary file system", () => XLPack.CreateFileSystem());
+
+    step($"Mounting '{gamePak}' to /master", () => {
+        IntPtr handle = XLPack.Mount("/master", gamePak, true);
+
+        handles["master"] = handle;
+
+        return handle != IntPtr.Zero;
+    });
+
+    step($"Applying '{patchPak} to /master'", () => XLPack.ApplyPatchPak("/master", patchPak));
+
+    step("Unmounting '/master'", () => XLPack.Unmount(handles["master"]));
+
+    if (extract) {
+        step($"Mounting '{gamePak}' to /src", () => {
+            IntPtr handle = XLPack.Mount("/src", gamePak, true);
+
+            handles["src"] = handle;
+
+            return handle != IntPtr.Zero;
+        });
+
+        step($"Mounting '{gameFolder}' to /dst", () => {
+            IntPtr handle = XLPack.Mount("/dst", gameFolder + @"\", true);
+
+            handles["dst"] = handle;
+
+            return handle != IntPtr.Zero;
+        });
+
+        step($"Copying directory 'src/bin32' to 'dst/bin32'", () => XLPack.CopyDir("src/bin32", "dst/bin32"));
+        step($"Copying directory 'src/bin64' to 'dst/bin64'", () => XLPack.CopyDir("src/bin64", "dst/bin64"));
+        step($"Copying directory 'src/easyanticheat' to 'dst/easyanticheat'", () => XLPack.CopyDir("src/easyanticheat", "dst/easyanticheat"));
+        step($"Copying file 'src/launch_game.exe' to 'dst/launch_game.exe'", () => XLPack.Copy("src/launch_game.exe", "dst/launch_game.exe"));
+
+        step("Unmounting '/src'", () => XLPack.Unmount(handles["src"]));
+        step("Unmounting '/dst'", () => XLPack.Unmount(handles["dst"]));
+    }
+
+    step("Destroying temporary file system", () => {
+        XLPack.DestroyFileSystem();
+        return true;
+    });
+}
+
+static void Install(DirectoryInfo gameDirectoryFi) {
+    string gameFolder = Path.GetFullPath(gameDirectoryFi.FullName);
+    string gamePakStr = Path.Join(gameFolder, "game_pak");
+    string gamePak = Path.GetFullPath(gamePakStr);
+
+    if (!Directory.Exists(gameFolder)) {
+        Console.Error.WriteLine($"game directory '{gameFolder}' does not exist.");
+        Environment.Exit(1);
+    }
+
+    if (!File.Exists(gamePak)) {
+        Console.Error.WriteLine($"game pak not found at path '{gamePak}'");
+        Environment.Exit(1);
+    }
+
+    if (FileUtil.IsFileLocked(gamePak)) {
+        Console.Error.WriteLine($"game pak '{gamePak}' is being used by another process.");
+        Environment.Exit(1);
+    }
+
+    Action<string, Func<bool>> step = (text, func) =>
+    {
+        Console.Write($"{text}... ");
+        bool result = func();
+        Console.WriteLine(result ? "SUCCESS" : "FAILURE");
+
+        if (!result) {
+            Environment.Exit(1);
+        }
+    };
+
+    Dictionary<string, IntPtr> handles = new Dictionary<string, IntPtr>();
+
+    step("Creating temporary file system", () => XLPack.CreateFileSystem());
+
+    step($"Mounting '{gamePak}' to /src", () => {
+        IntPtr handle = XLPack.Mount("/src", gamePak, true);
+
+        handles["src"] = handle;
+
+        return handle != IntPtr.Zero;
+    });
+
+    step($"Mounting '{gameFolder}' to /dst", () => {
+        IntPtr handle = XLPack.Mount("/dst", gameFolder + @"\", true);
+
+        handles["dst"] = handle;
+
+        return handle != IntPtr.Zero;
+    });
+
+    step($"Copying directory 'src/bin32' to 'dst/bin32'", () => XLPack.CopyDir("src/bin32", "dst/bin32"));
+    step($"Copying directory 'src/bin64' to 'dst/bin64'", () => XLPack.CopyDir("src/bin64", "dst/bin64"));
+    step($"Copying directory 'src/easyanticheat' to 'dst/easyanticheat'", () => XLPack.CopyDir("src/easyanticheat", "dst/easyanticheat"));
+    step($"Copying file 'src/launch_game.exe' to 'dst/launch_game.exe'", () => XLPack.Copy("src/launch_game.exe", "dst/launch_game.exe"));
+
+    step("Unmounting '/src'", () => XLPack.Unmount(handles["src"]));
+    step("Unmounting '/dst'", () => XLPack.Unmount(handles["dst"]));
+    step("Destroying temporary file system", () => {
+        XLPack.DestroyFileSystem();
+        return true;
+    });
+}
+
+static void Unpack(FileInfo pakFi, DirectoryInfo destinationFi) {
+    string gamePak = Path.GetFullPath(pakFi.FullName);
+    string destinationFolder = Path.GetFullPath(destinationFi.FullName);
+
+    if (!File.Exists(gamePak)) {
+        Console.Error.WriteLine($"game pak not found at path '{gamePak}'");
+        Environment.Exit(1);
+    }
+
+    if (!Directory.Exists(destinationFolder)) {
+        Console.WriteLine($"Destination directory '{destinationFolder}' not found, creating.");
+        Directory.CreateDirectory(destinationFolder);
+    }
+
+    Action<string, Func<bool>> step = (text, func) =>
+    {
+        Console.Write($"{text}... ");
+        bool result = func();
+        Console.WriteLine(result ? "SUCCESS" : "FAILURE");
+
+        if (!result) {
+            Environment.Exit(1);
+        }
+    };
+
+    Dictionary<string, IntPtr> handles = new Dictionary<string, IntPtr>();
+
+    step("Creating temporary file system", () => XLPack.CreateFileSystem());
+
+    step($"Mounting '{gamePak}' to /src", () => {
+        IntPtr handle = XLPack.Mount("/src", gamePak, true);
+
+        handles["src"] = handle;
+
+        return handle != IntPtr.Zero;
+    });
+
+    step($"Mounting '{destinationFolder}' to /dst", () => {
+        IntPtr handle = XLPack.Mount("/dst", destinationFolder + @"\", true);
+
+        handles["dst"] = handle;
+
+        return handle != IntPtr.Zero;
+    });
+
+    step($"Copying directory 'src' to 'dst'", () => XLPack.CopyDir("src", "dst"));
+
+    step("Unmounting '/src'", () => XLPack.Unmount(handles["src"]));
+    step("Unmounting '/dst'", () => XLPack.Unmount(handles["dst"]));
+    step("Destroying temporary file system", () => {
+        XLPack.DestroyFileSystem();
+        return true;
+    });
+}

@@ -1,8 +1,8 @@
 # ArcheAge patcher
 
-Application for applying a patch PAK to an existing ArcheAge installation.
+Utility for performing operations with ArcheAge pak files.
 
-The patching procedure is identical to what [KakaoGames ArcheAge Launcher](https://archeage.playkakaogames.com/download) performs.
+The patching procedure is identical to what [KakaoGames ArcheAge Launcher](https://archeage.playkakaogames.com/download) performs internally.
 
 ## Basic usage
 
@@ -10,7 +10,7 @@ Download the pre-built binary from [releases page](https://github.com/Ingramz/aa
 
 Then run from command line:
 ```
-aapatcher.exe C:\KakaoGames\ArcheAge C:\path\to\a\patch.pak
+aapatcher.exe patch C:\KakaoGames\ArcheAge C:\path\to\a\patch.pak --extract
 ```
 
 Output:

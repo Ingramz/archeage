@@ -14,7 +14,7 @@ public class FileUtil {
             // or does not exist (has already been processed)
             return true;
         }
-        
+
         // file is not locked
         return false;
     }
