@@ -9,100 +9,76 @@ Source code is licensed under the MIT License.");
 
 var MakePatchCommand = () => {
     var patchCommand = new Command("patch", "Apply a patch pak");
-    var gameDirectoryArgument = new Argument<DirectoryInfo>(
-        name: "game directory",
-        description: "Path to game directory containing game_pak"
-    );
-    patchCommand.AddArgument(gameDirectoryArgument);
+    var gameDirectoryArgument = new Argument<DirectoryInfo>("game directory") { Description = "Path to game directory containing game_pak" };
+    patchCommand.Arguments.Add(gameDirectoryArgument);
 
-    var patchPakArgument = new Argument<FileInfo>(
-        name: "patch pak",
-        description: "Path to patch pak"
-    );
+    var patchPakArgument = new Argument<FileInfo>("patch pak") { Description = "Path to patch pak" };
 
-    patchCommand.AddArgument(patchPakArgument);
+    patchCommand.Arguments.Add(patchPakArgument);
 
-    var extractOption = new Option<bool>(
-        name: "--extract",
-        description: "Extract executables after patching"
-    );
+    var extractOption = new Option<bool>("--extract") { Description = "Extract executables after patching" };
 
-    patchCommand.AddOption(extractOption);
+    patchCommand.Options.Add(extractOption);
 
-    patchCommand.SetHandler((DirectoryInfo gameDirectory, FileInfo patchPak, bool extract) => {
-        Patch(gameDirectory, patchPak, extract);
-    }, gameDirectoryArgument, patchPakArgument, extractOption);
+    patchCommand.SetAction((ctx) => {
+        Patch(ctx.GetValue(gameDirectoryArgument), ctx.GetValue(patchPakArgument), ctx.GetValue(extractOption));
+    });
 
     return patchCommand;
 };
 
-rootCommand.AddCommand(MakePatchCommand());
+rootCommand.Subcommands.Add(MakePatchCommand());
 
 var MakeInstallCommand = () => {
     var installCommand = new Command("install", "Extract executable files from game_pak");
 
-    var gameDirectoryArgument = new Argument<DirectoryInfo>(
-        name: "game directory",
-        description: "Path to game directory containing game_pak"
-    );
+    var gameDirectoryArgument = new Argument<DirectoryInfo>("game directory") { Description = "Path to game directory containing game_pak" };
 
-    installCommand.AddArgument(gameDirectoryArgument);
+    installCommand.Arguments.Add(gameDirectoryArgument);
 
-    installCommand.SetHandler((DirectoryInfo gameDirectory) => {
-        Install(gameDirectory);
-    }, gameDirectoryArgument);
+    installCommand.SetAction((ctx) => {
+        Install(ctx.GetValue(gameDirectoryArgument));
+    });
 
     return installCommand;
 };
 
-rootCommand.AddCommand(MakeInstallCommand());
+rootCommand.Subcommands.Add(MakeInstallCommand());
 
 var MakeUnpackCommand = () => {
     var unpackCommand = new Command("unpack", "Unpack files from pak");
-    var pakArgument = new Argument<FileInfo>(
-        name: "pak",
-        description: "Path to pak"
-    );
-    unpackCommand.AddArgument(pakArgument);
+    var pakArgument = new Argument<FileInfo>("pak") { Description = "Path to pak" };
+    unpackCommand.Arguments.Add(pakArgument);
 
-    var destinationArgument = new Argument<DirectoryInfo>(
-        name: "destination",
-        description: "Destionation where to extract the files"
-    );
+    var destinationArgument = new Argument<DirectoryInfo>("destination") { Description = "Destionation where to extract the files" };
 
-    unpackCommand.AddArgument(destinationArgument);
+    unpackCommand.Arguments.Add(destinationArgument);
 
-    unpackCommand.SetHandler((pak, destination) => {
-        Unpack(pak, destination);
-    }, pakArgument, destinationArgument);
+    unpackCommand.SetAction((ctx) => {
+        Unpack(ctx.GetValue(pakArgument), ctx.GetValue(destinationArgument));
+    });
 
     return unpackCommand;
 };
 
-rootCommand.AddCommand(MakeUnpackCommand());
+rootCommand.Subcommands.Add(MakeUnpackCommand());
 
 var MakeCreateCommand = () => {
     var createCommand = new Command("create", "Create a pak");
-    var pakArgument = new Argument<FileInfo>(
-        name: "pak",
-        description: "Path to pak"
-    );
-    createCommand.AddArgument(pakArgument);
+    var pakArgument = new Argument<FileInfo>("pak") { Description = "Path to pak" };
+    createCommand.Arguments.Add(pakArgument);
 
-    var rootArgument = new Argument<DirectoryInfo>(
-        name: "root",
-        description: "Path to root of files"
-    );
-    createCommand.AddArgument(rootArgument);
+    var rootArgument = new Argument<DirectoryInfo>("root") { Description = "Path to root of files" };
+    createCommand.Arguments.Add(rootArgument);
 
-    createCommand.SetHandler((pak, root) => {
-        Create(pak, root);
-    }, pakArgument, rootArgument);
+    createCommand.SetAction((ctx) => {
+        Create(ctx.GetValue(pakArgument), ctx.GetValue(rootArgument));
+    });
 
     return createCommand;
 };
 
-rootCommand.AddCommand(MakeCreateCommand());
+rootCommand.Subcommands.Add(MakeCreateCommand());
 
 return await rootCommand.InvokeAsync(args);
 

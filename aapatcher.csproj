@@ -12,12 +12,18 @@
     <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
     <PublishTrimmed>false</PublishTrimmed>
     <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Costura32\tbb.dll" />
     <EmbeddedResource Include="Costura32\xlpack.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.CommandLine">
+      <HintPath>System.CommandLine.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +33,5 @@
     <PackageReference Include="Fody" Version="6.6.4">
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
   </ItemGroup>
 </Project>
