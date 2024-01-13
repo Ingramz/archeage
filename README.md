@@ -30,6 +30,11 @@ Unmounting '/dst'... SUCCESS
 Destroying temporary file system... SUCCESS
 ```
 
+## Known issues
+
+* Due to application being `xlpack.dll` based, it will not be able to open files created on a filesystem with a different sector size.
+  All first party `game_pak`-s and patches are distributed with sector size of 512 bytes. Opening a 512 byte formatted file on a 4096 byte filesystem will overwrite its contents.
+
 ## Building the project
 
 Install [.NET SDK](https://dotnet.microsoft.com/en-us/download).
