@@ -1,6 +1,6 @@
 ﻿using System.CommandLine;
 
-var rootCommand = new RootCommand(@"Utility for performing operations with ArcheAge pak files.
+var rootCommand = new CliRootCommand(@"Utility for performing operations with ArcheAge pak files.
 
 https://github.com/Ingramz/aapatcher
 
@@ -8,15 +8,15 @@ Copyright (c) 2022 Indrek 'Ingram' Ardel
 Source code is licensed under the MIT License.");
 
 var MakePatchCommand = () => {
-    var patchCommand = new Command("patch", "Apply a patch pak");
-    var gameDirectoryArgument = new Argument<DirectoryInfo>("game directory") { Description = "Path to game directory containing game_pak" };
+    var patchCommand = new CliCommand("patch", "Apply a patch pak");
+    var gameDirectoryArgument = new CliArgument<DirectoryInfo>("game directory") { Description = "Path to game directory containing game_pak" };
     patchCommand.Arguments.Add(gameDirectoryArgument);
 
-    var patchPakArgument = new Argument<FileInfo>("patch pak") { Description = "Path to patch pak" };
+    var patchPakArgument = new CliArgument<FileInfo>("patch pak") { Description = "Path to patch pak" };
 
     patchCommand.Arguments.Add(patchPakArgument);
 
-    var extractOption = new Option<bool>("--extract") { Description = "Extract executables after patching" };
+    var extractOption = new CliOption<bool>("--extract") { Description = "Extract executables after patching" };
 
     patchCommand.Options.Add(extractOption);
 
@@ -30,9 +30,9 @@ var MakePatchCommand = () => {
 rootCommand.Subcommands.Add(MakePatchCommand());
 
 var MakeInstallCommand = () => {
-    var installCommand = new Command("install", "Extract executable files from game_pak");
+    var installCommand = new CliCommand("install", "Extract executable files from game_pak");
 
-    var gameDirectoryArgument = new Argument<DirectoryInfo>("game directory") { Description = "Path to game directory containing game_pak" };
+    var gameDirectoryArgument = new CliArgument<DirectoryInfo>("game directory") { Description = "Path to game directory containing game_pak" };
 
     installCommand.Arguments.Add(gameDirectoryArgument);
 
@@ -46,11 +46,11 @@ var MakeInstallCommand = () => {
 rootCommand.Subcommands.Add(MakeInstallCommand());
 
 var MakeUnpackCommand = () => {
-    var unpackCommand = new Command("unpack", "Unpack files from pak");
-    var pakArgument = new Argument<FileInfo>("pak") { Description = "Path to pak" };
+    var unpackCommand = new CliCommand("unpack", "Unpack files from pak");
+    var pakArgument = new CliArgument<FileInfo>("pak") { Description = "Path to pak" };
     unpackCommand.Arguments.Add(pakArgument);
 
-    var destinationArgument = new Argument<DirectoryInfo>("destination") { Description = "Destionation where to extract the files" };
+    var destinationArgument = new CliArgument<DirectoryInfo>("destination") { Description = "Destionation where to extract the files" };
 
     unpackCommand.Arguments.Add(destinationArgument);
 
@@ -64,11 +64,11 @@ var MakeUnpackCommand = () => {
 rootCommand.Subcommands.Add(MakeUnpackCommand());
 
 var MakeCreateCommand = () => {
-    var createCommand = new Command("create", "Create a pak");
-    var pakArgument = new Argument<FileInfo>("pak") { Description = "Path to pak" };
+    var createCommand = new CliCommand("create", "Create a pak");
+    var pakArgument = new CliArgument<FileInfo>("pak") { Description = "Path to pak" };
     createCommand.Arguments.Add(pakArgument);
 
-    var rootArgument = new Argument<DirectoryInfo>("root") { Description = "Path to root of files" };
+    var rootArgument = new CliArgument<DirectoryInfo>("root") { Description = "Path to root of files" };
     createCommand.Arguments.Add(rootArgument);
 
     createCommand.SetAction((ctx) => {
@@ -80,9 +80,12 @@ var MakeCreateCommand = () => {
 
 rootCommand.Subcommands.Add(MakeCreateCommand());
 
-return await rootCommand.InvokeAsync(args);
+return await rootCommand.Parse(args).InvokeAsync();
 
-static void Create(FileInfo pakFi, DirectoryInfo rootDirectoryFi) {
+static void Create(FileInfo? pakFi, DirectoryInfo? rootDirectoryFi) {
+    ArgumentNullException.ThrowIfNull(pakFi);
+    ArgumentNullException.ThrowIfNull(rootDirectoryFi);
+
     string pak = Path.GetFullPath(pakFi.FullName);
     string rootDirectory = Path.GetFullPath(rootDirectoryFi.FullName);
 
@@ -140,7 +143,10 @@ static void Create(FileInfo pakFi, DirectoryInfo rootDirectoryFi) {
     });
 }
 
-static void Patch(DirectoryInfo gameDirectoryFi, FileInfo patchPakFi, bool extract) {
+static void Patch(DirectoryInfo? gameDirectoryFi, FileInfo? patchPakFi, bool extract) {
+    ArgumentNullException.ThrowIfNull(gameDirectoryFi);
+    ArgumentNullException.ThrowIfNull(patchPakFi);
+
     string gameFolder = Path.GetFullPath(gameDirectoryFi.FullName);
     string gamePakStr = Path.Join(gameFolder, "game_pak");
     string gamePak = Path.GetFullPath(gamePakStr);
@@ -225,7 +231,9 @@ static void Patch(DirectoryInfo gameDirectoryFi, FileInfo patchPakFi, bool extra
     });
 }
 
-static void Install(DirectoryInfo gameDirectoryFi) {
+static void Install(DirectoryInfo? gameDirectoryFi) {
+    ArgumentNullException.ThrowIfNull(gameDirectoryFi);
+
     string gameFolder = Path.GetFullPath(gameDirectoryFi.FullName);
     string gamePakStr = Path.Join(gameFolder, "game_pak");
     string gamePak = Path.GetFullPath(gamePakStr);
@@ -289,7 +297,10 @@ static void Install(DirectoryInfo gameDirectoryFi) {
     });
 }
 
-static void Unpack(FileInfo pakFi, DirectoryInfo destinationFi) {
+static void Unpack(FileInfo? pakFi, DirectoryInfo? destinationFi) {
+    ArgumentNullException.ThrowIfNull(pakFi);
+    ArgumentNullException.ThrowIfNull(destinationFi);
+
     string gamePak = Path.GetFullPath(pakFi.FullName);
     string destinationFolder = Path.GetFullPath(destinationFi.FullName);
 
