@@ -37,6 +37,5 @@ msbuild.wrn
 .vs/
 
 # Project-specific
-FodyWeavers.xsd
-Costura32/xlpack.dll
-Costura32/tbb.dll
+native/xlpack.dll
+native/tbb.dll

@@ -34,7 +34,7 @@ Destroying temporary file system... SUCCESS
 
 Install [.NET SDK](https://dotnet.microsoft.com/en-us/download).
 
-Copy `xlpack.dll` and `tbb.dll` from an installed [ArcheAge Launcher](https://archeage.playkakaogames.com/download) to `Costura32` directory.
+Copy `xlpack.dll` and `tbb.dll` from an installed [ArcheAge Launcher](https://archeage.playkakaogames.com/download) to `native` directory.
 
 Create the release binary:
 ```
