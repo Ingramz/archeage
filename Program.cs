@@ -12,7 +12,7 @@ var MakePatchCommand = () => {
     var gameDirectoryArgument = new CliArgument<DirectoryInfo>("game directory") { Description = "Path to game directory containing game_pak" };
     patchCommand.Arguments.Add(gameDirectoryArgument);
 
-    var patchPakArgument = new CliArgument<FileInfo>("patch pak") { Description = "Path to patch pak" };
+    var patchPakArgument = new CliArgument<FileInfo[]>("patch pak") { Description = "Path to patch pak(s)" };
 
     patchCommand.Arguments.Add(patchPakArgument);
 
@@ -143,14 +143,14 @@ static void Create(FileInfo? pakFi, DirectoryInfo? rootDirectoryFi) {
     });
 }
 
-static void Patch(DirectoryInfo? gameDirectoryFi, FileInfo? patchPakFi, bool extract) {
+static void Patch(DirectoryInfo? gameDirectoryFi, FileInfo[]? patchPakFis, bool extract) {
     ArgumentNullException.ThrowIfNull(gameDirectoryFi);
-    ArgumentNullException.ThrowIfNull(patchPakFi);
+    ArgumentNullException.ThrowIfNull(patchPakFis);
 
     string gameFolder = Path.GetFullPath(gameDirectoryFi.FullName);
     string gamePakStr = Path.Join(gameFolder, "game_pak");
     string gamePak = Path.GetFullPath(gamePakStr);
-    string patchPak = Path.GetFullPath(patchPakFi.FullName);
+    string[] patchPaks = patchPakFis.Select(pak => Path.GetFullPath(pak.FullName)).ToArray();
 
     if (!Directory.Exists(gameFolder)) {
         Console.Error.WriteLine($"game directory '{gameFolder}' does not exist.");
@@ -162,8 +162,9 @@ static void Patch(DirectoryInfo? gameDirectoryFi, FileInfo? patchPakFi, bool ext
         Environment.Exit(1);
     }
 
-    if (!File.Exists(patchPak)) {
-        Console.Error.WriteLine($"patch pak not found at path '{patchPak}'");
+    string? missingPak = patchPaks.FirstOrDefault(patchPak => !File.Exists(patchPak), null);
+    if (missingPak != null) {
+        Console.Error.WriteLine($"patch pak not found at path '{missingPak}'");
         Environment.Exit(1);
     }
 
@@ -195,7 +196,10 @@ static void Patch(DirectoryInfo? gameDirectoryFi, FileInfo? patchPakFi, bool ext
         return handle != IntPtr.Zero;
     });
 
-    step($"Applying '{patchPak} to /master'", () => XLPack.ApplyPatchPak("/master", patchPak));
+    foreach (var patchPak in patchPaks)
+    {
+        step($"Applying '{patchPak} to /master'", () => XLPack.ApplyPatchPak("/master", patchPak));
+    }
 
     step("Unmounting '/master'", () => XLPack.Unmount(handles["master"]));
 
