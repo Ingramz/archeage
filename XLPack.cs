@@ -1,7 +1,8 @@
 using System;
 using System.Runtime.InteropServices;
 
-public class XLPack {
+public class XLPack
+{
     [DllImport("xlpack.dll", EntryPoint = "?ApplyPatchPak@@YA_NPBD0@Z", CharSet = CharSet.Ansi, CallingConvention = CallingConvention.Cdecl)]
     public static extern bool ApplyPatchPak([MarshalAs(UnmanagedType.LPStr)] string to, [MarshalAs(UnmanagedType.LPStr)] string pathToPak);
 
