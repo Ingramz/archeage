@@ -1,0 +1,4 @@
+LIBRARY cryaction
+EXPORTS
+	CreateGameFramework=fCreateGameFramework @1
+	CryModuleGetMemoryInfo=fCryModuleGetMemoryInfo @2
