@@ -1,0 +1,24 @@
+run
+run xlcommon.dll:?XlAcpToMulti@@YAHPEADHPEBD@Z
+
+x2gameimagebase = x2game.dll:imagebase
+x2gameimagesize = mod.size(x2game.dll:imagebase)
+
+findallmem x2gameimagebase, "33D2488B8424????????B91000000048F7F1488BC2B910000000482BC8488BC1898424????????", x2gameimagesize
+fileloc = ref.addr(0)
+filesizeloc = fileloc + 0xA
+
+run fileloc
+filelocaddr = rax
+
+run filesizeloc
+filesize = rax
+
+findallmem x2gameimagebase, "81 38 50 4B 01 02", x2gameimagesize
+run ref.addr(0)
+
+savedata "C:\Users\Indrek\database-extractor\database.zip", filelocaddr, filesize
+
+stop
+zzz 0x7D0
+exit

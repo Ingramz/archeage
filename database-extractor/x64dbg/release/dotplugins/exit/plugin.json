@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Exit Plugin",
+  "Description": "Adds exit command",
+  "Version": "1.0.0",
+  "Author": "x64Dbg",
+  "Website": "http://github.com/x64Dbg",
+  "Dependencies": [
+  ],
+  "Settings": {
+    "Test": false
+  }
+}

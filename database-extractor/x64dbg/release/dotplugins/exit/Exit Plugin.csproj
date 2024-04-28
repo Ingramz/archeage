@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Platforms>x64;x86</Platforms>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(PlatformName)' == 'x86'">
+    <Reference Include="C:\Users\Indrek\database-extractor\x64dbg\release\x86\plugins\Dotx64Dbg.Bindings.dll" />
+    <Reference Include="C:\Users\Indrek\database-extractor\x64dbg\release\x86\plugins\Dotx64Dbg.Managed.dll" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(PlatformName)' == 'x64'">
+    <Reference Include="C:\Users\Indrek\database-extractor\x64dbg\release\x64\plugins\Dotx64Dbg.Bindings.dll" />
+    <Reference Include="C:\Users\Indrek\database-extractor\x64dbg\release\x64\plugins\Dotx64Dbg.Managed.dll" />
+  </ItemGroup>
+  <ItemGroup />
+</Project>
