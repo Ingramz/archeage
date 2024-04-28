@@ -1,0 +1,92 @@
+[
+    {
+        "id": 13,
+        "name": "Ardenia",
+        "region": "EU",
+        "unchained": true
+    },
+    {
+        "id": 14,
+        "name": "Nehliya",
+        "region": "EU",
+        "unchained": true
+    },
+    {
+        "id": 15,
+        "name": "Kraken",
+        "region": "NA",
+        "unchained": true
+    },
+    {
+        "id": 16,
+        "name": "Kyrios",
+        "region": "NA",
+        "unchained": true
+    },
+    {
+        "id": 17,
+        "name": "Leviathan",
+        "region": "EU",
+        "unchained": false
+    },
+    {
+        "id": 18,
+        "name": "Kyprosa",
+        "region": "EU",
+        "unchained": false
+    },
+    {
+        "id": 19,
+        "name": "Ospheros",
+        "region": "NA",
+        "unchained": false
+    },
+    {
+        "id": 20,
+        "name": "Erenor",
+        "region": "NA",
+        "unchained": false
+    },
+    {
+        "id": 21,
+        "name": "Arcadian",
+        "region": "EU",
+        "unchained": true
+    },
+    {
+        "id": 22,
+        "name": "Stormraw",
+        "region": "NA",
+        "unchained": true
+    },
+    {
+        "id": 23,
+        "name": "Melisara",
+        "region": "EU",
+        "unchained": false
+    },
+    {
+        "id": 24,
+        "name": "Gene",
+        "region": "NA",
+        "unchained": false
+    },
+    {
+        "id": 25,
+        "name": "Classic",
+        "region": "CLA",
+        "unchained": false
+    },
+    {
+        "id": 26,
+        "name": "Celestia",
+        "region": "EU",
+        "unchained": false
+    },
+    {
+        "id": 27,
+        "name": "Blacksands",
+        "region": "NA",
+        "unchained": false
+    }
+]

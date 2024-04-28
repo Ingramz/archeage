@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Aria",
+        "region": "NA",
+        "unchained": false
+    },
+    {
+        "id": 2,
+        "name": "Dochul",
+        "region": "NA",
+        "unchained": false
+    },
+    {
+        "id": 3,
+        "name": "Arkanis",
+        "region": "EU",
+        "unchained": false
+    },
+    {
+        "id": 4,
+        "name": "Jakar",
+        "region": "EU",
+        "unchained": false
+    },
+    {
+        "id": 5,
+        "name": "Akmit",
+        "region": "NA",
+        "unchained": true
+    },
+    {
+        "id": 6,
+        "name": "Marmas",
+        "region": "NA",
+        "unchained": true
+    },
+    {
+        "id": 7,
+        "name": "Okape",
+        "region": "EU",
+        "unchained": true
+    },
+    {
+        "id": 8,
+        "name": "Hieronimus",
+        "region": "EU",
+        "unchained": true
+    },
+    {
+        "id": 9,
+        "name": "Nui",
+        "region": "SEA",
+        "unchained": false
+    },
+    {
+        "id": 10,
+        "name": "Godfrey",
+        "region": "NA",
+        "unchained": true
+    },
+    {
+        "id": 11,
+        "name": "Carmila",
+        "region": "EU",
+        "unchained": true
+    },
+    {
+        "id": 12,
+        "name": "Gene",
+        "region": "SEA",
+        "unchained": false
+    }
+]

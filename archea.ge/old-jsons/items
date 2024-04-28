@@ -1,0 +1,653 @@
+[
+    {
+        "id": 4052,
+        "name": "Hereafter Stone",
+        "icon": "icon_item_0418",
+        "type": "Contraption",
+        "grade": 1,
+        "description": "A Teleport Scroll utilizes the power stored in a Hereafter Stone to open a Worldgate. Jump through the gate to travel to a recorded location.\r\n\r\nHereafter Stones contain enough power to send you anywhere on your current continent. Three Hereafter Stones contain enough power to send you to a different continent.",
+        "price": 100,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 8343,
+        "name": "Stone Brick",
+        "icon": "icon_item_0283",
+        "type": "Stone Brick",
+        "grade": 1,
+        "description": "A processed |cYELLOW|Stone|c|.\r\nIt's chiefly used for Masonry purposes.\r\n\r\nVocation: Masonry\r\nWorkbench: Stonemason Workbench",
+        "price": 10,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 16321,
+        "name": "Sturdy Stone",
+        "icon": "icon_item_0349",
+        "type": "Stone Brick",
+        "grade": 1,
+        "description": "Processed from |cYELLOW|Stone Brick|c|. It's chiefly used in masonry.\r\n\r\nVocation: Masonry\r\nWorkbench: Stonemason Workbench",
+        "price": 550,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 16323,
+        "name": "Rising Star Stone",
+        "icon": "icon_item_0351",
+        "type": "Stone Brick",
+        "grade": 1,
+        "description": "Processed from |cYELLOW|Sturdy Stone|c|. It's chiefly used in masonry.\r\n\r\nVocation: Masonry\r\nWorkbench: Stonemason Workbench",
+        "price": 4500,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 17684,
+        "name": "Stone Pack",
+        "icon": "icon_item_0381",
+        "type": "Trade Pack",
+        "grade": 1,
+        "description": "A bundle of materials to be carried on one's back. This material is used in construction and shipbuilding.\r\n\r\nCaution: Dropped trade packs disappear after 6 days.\r\n\r\nVocation: Masonry\r\nWorkbench: Stonemason Workbench",
+        "useEffect": "Place the trade pack on the ground. Dropped trade packs are up for grabs.",
+        "price": 1000,
+        "bindsOnPickup": true,
+        "sealed": false,
+        "salvageable": false,
+        "equip": {
+            "slot": "Trade Pack",
+            "minDamage": 0,
+            "maxDamage": 0,
+            "magicAttack": 0,
+            "healingPower": 0,
+            "equipEffect": "Carrying heavy objects reduces movement speed and prevents teleporting or gliding.",
+            "petLevel": 0,
+            "stats": []
+        }
+    },
+    {
+        "id": 27301,
+        "name": "Rising Star Stone Pack",
+        "icon": "icon_item_0381",
+        "type": "Trade Pack",
+        "grade": 5,
+        "description": "A bundle of Rising Star Stone materials.\r\nUsed to enchant a |cLIGHT_BLUE|Purification Monolith|c|.\r\n\r\n|cORANGE|Crafting Info|c|\r\nMembers of the Nuia and Haranya Alliance can craft it at the |cLIGHT_BLUE|Diamond Shores Faction Base|c|.\r\nPirates can craft it on |cLIGHT_BLUE|Growlgate Isle|c|.\r\n\r\n\r\nVocation: Masonry\r\nWorkbench: Rising Star Stonemason Workbench\r\n\r\nNote: Dropped packs disappear in 6 days.",
+        "useEffect": "Place the trade pack on the ground, where anyone can pick it up.",
+        "price": 90000,
+        "bindsOnPickup": true,
+        "sealed": false,
+        "salvageable": false,
+        "equip": {
+            "slot": "Trade Pack",
+            "minDamage": 0,
+            "maxDamage": 0,
+            "magicAttack": 0,
+            "healingPower": 0,
+            "equipEffect": "Carrying heavy objects reduces movement speed and prevents teleporting or gliding.",
+            "petLevel": 0,
+            "stats": []
+        }
+    },
+    {
+        "id": 29954,
+        "name": "Rough Stone Column",
+        "icon": "icon_item_1550",
+        "type": "Furniture",
+        "grade": 1,
+        "description": "Place in a completed house. Can be used to carve a variety of stone decor items (but will be consumed in the process).\r\n\r\nPlacement: yard\r\n\r\nDestroyed if not removed before the building is demolished.",
+        "price": 20,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 32103,
+        "name": "Onyx Archeum Essence",
+        "icon": "icon_item_4457",
+        "type": "Archeum",
+        "grade": 1,
+        "description": "Imbued with mysterious garden lights, as a core source of magic, it is used in crafting consumables and machines.\r\n\r\nCan be acquired by delivering Cargo to |cLIGHT_BLUE|Cargo Exchangers|c|, or Delphinad Ghost Ship Stone Slabs to the |cLIGHT_BLUE|Shadow Merchant|c| on Freedich Island.",
+        "price": 9500,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 34957,
+        "name": "Radiant Dawnsdrop Cap",
+        "icon": "costume_hm/nu_f_hm_cloth488",
+        "type": "Leather Armor",
+        "grade": 1,
+        "price": 400,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": true,
+        "reqLevel": 50,
+        "equip": {
+            "slot": "Head",
+            "bindsOnEquip": true,
+            "minDamage": 0,
+            "maxDamage": 0,
+            "magicAttack": 0,
+            "healingPower": 0,
+            "equipEffect": "Increases Handicraft, Tailoring, and Artistry proficiencies +20000.\r\nCan complete actions faster when related actions are completed consecutively.",
+            "petLevel": 0,
+            "maxGrade": 12,
+            "durability": 60,
+            "tempering": true,
+            "stats": [
+                {
+                    "name": "Magic Defense",
+                    "value": 599.49
+                },
+                {
+                    "name": "Physical Defense",
+                    "value": 599.49
+                },
+                {
+                    "name": "Stamina",
+                    "value": 43.125488126312
+                },
+                {
+                    "name": "Agility",
+                    "value": 28.916992084208
+                }
+            ]
+        }
+    },
+    {
+        "id": 34958,
+        "name": "Radiant Dawnsdrop Jerkin",
+        "icon": "costume_ar/nu_f_ar_cloth488",
+        "type": "Leather Armor",
+        "grade": 1,
+        "price": 400,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": true,
+        "reqLevel": 50,
+        "equip": {
+            "slot": "Chest",
+            "bindsOnEquip": true,
+            "minDamage": 0,
+            "maxDamage": 0,
+            "magicAttack": 0,
+            "healingPower": 0,
+            "equipEffect": "Increases Weaponry, Logging, Construction, and Exploration proficiencies +20000.\r\nCan complete actions faster when related actions are completed consecutively.",
+            "petLevel": 0,
+            "maxGrade": 12,
+            "durability": 105,
+            "tempering": true,
+            "stats": [
+                {
+                    "name": "Physical Defense",
+                    "value": 999.15
+                },
+                {
+                    "name": "Agility",
+                    "value": 47.86165347368
+                },
+                {
+                    "name": "Stamina",
+                    "value": 71.54248021052
+                },
+                {
+                    "name": "Magic Defense",
+                    "value": 999.15
+                }
+            ]
+        }
+    },
+    {
+        "id": 34959,
+        "name": "Radiant Dawnsdrop Breeches",
+        "icon": "costume_pt/nu_f_pt_cloth488",
+        "type": "Leather Armor",
+        "grade": 1,
+        "price": 400,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": true,
+        "reqLevel": 50,
+        "equip": {
+            "slot": "Legs",
+            "bindsOnEquip": true,
+            "minDamage": 0,
+            "maxDamage": 0,
+            "magicAttack": 0,
+            "healingPower": 0,
+            "equipEffect": "Increases Masonry, Carpentry, and Gathering proficiencies +20000.\r\nCan complete actions faster when related actions are completed consecutively.",
+            "petLevel": 0,
+            "maxGrade": 12,
+            "durability": 85,
+            "tempering": true,
+            "stats": [
+                {
+                    "name": "Stamina",
+                    "value": 57.333984168416
+                },
+                {
+                    "name": "Magic Defense",
+                    "value": 799.32
+                },
+                {
+                    "name": "Agility",
+                    "value": 38.389322778944
+                },
+                {
+                    "name": "Physical Defense",
+                    "value": 799.32
+                }
+            ]
+        }
+    },
+    {
+        "id": 34960,
+        "name": "Radiant Dawnsdrop Fists",
+        "icon": "costume_gv/nu_m_gv_cloth488",
+        "type": "Leather Armor",
+        "grade": 1,
+        "price": 400,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": true,
+        "reqLevel": 50,
+        "equip": {
+            "slot": "Hands",
+            "bindsOnEquip": true,
+            "minDamage": 0,
+            "maxDamage": 0,
+            "magicAttack": 0,
+            "healingPower": 0,
+            "equipEffect": "Increases Larceny, Machining, and Mining proficiencies +20000.\r\nCan complete actions faster when related actions are completed consecutively.",
+            "petLevel": 0,
+            "maxGrade": 12,
+            "durability": 40,
+            "tempering": true,
+            "stats": [
+                {
+                    "name": "Stamina",
+                    "value": 28.916992084208
+                },
+                {
+                    "name": "Physical Defense",
+                    "value": 399.66
+                },
+                {
+                    "name": "Agility",
+                    "value": 19.444661389472
+                },
+                {
+                    "name": "Magic Defense",
+                    "value": 399.66
+                }
+            ]
+        }
+    },
+    {
+        "id": 34961,
+        "name": "Radiant Dawnsdrop Boots",
+        "icon": "costume_bo/nu_f_bo_cloth488",
+        "type": "Leather Armor",
+        "grade": 1,
+        "price": 400,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": true,
+        "reqLevel": 50,
+        "equip": {
+            "slot": "Feet",
+            "bindsOnEquip": true,
+            "minDamage": 0,
+            "maxDamage": 0,
+            "magicAttack": 0,
+            "healingPower": 0,
+            "equipEffect": "Increases Metalwork, Fishing, and Commerce proficiencies +20000.\r\nCan complete actions faster when related actions are completed consecutively.",
+            "petLevel": 0,
+            "maxGrade": 12,
+            "durability": 40,
+            "tempering": true,
+            "stats": [
+                {
+                    "name": "Agility",
+                    "value": 19.444661389472
+                },
+                {
+                    "name": "Physical Defense",
+                    "value": 399.66
+                },
+                {
+                    "name": "Stamina",
+                    "value": 28.916992084208
+                },
+                {
+                    "name": "Magic Defense",
+                    "value": 399.66
+                }
+            ]
+        }
+    },
+    {
+        "id": 34962,
+        "name": "Radiant Dawnsdrop Guards",
+        "icon": "icon_item_arm_leather_0008",
+        "type": "Leather Armor",
+        "grade": 1,
+        "price": 400,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": true,
+        "reqLevel": 50,
+        "equip": {
+            "slot": "Wrists",
+            "bindsOnEquip": true,
+            "minDamage": 0,
+            "maxDamage": 0,
+            "magicAttack": 0,
+            "healingPower": 0,
+            "equipEffect": "Increases Alchemy, Leatherwork, and Farming proficiencies +20000.\r\nCan complete actions faster when related actions are completed consecutively.",
+            "petLevel": 0,
+            "maxGrade": 12,
+            "durability": 20,
+            "tempering": true,
+            "stats": [
+                {
+                    "name": "Agility",
+                    "value": 9.972330694736
+                },
+                {
+                    "name": "Stamina",
+                    "value": 14.708496042104
+                },
+                {
+                    "name": "Magic Defense",
+                    "value": 199.83
+                },
+                {
+                    "name": "Physical Defense",
+                    "value": 199.83
+                }
+            ]
+        }
+    },
+    {
+        "id": 34963,
+        "name": "Radiant Dawnsdrop Belt",
+        "icon": "icon_item_belt_leather_0010",
+        "type": "Leather Armor",
+        "grade": 1,
+        "price": 400,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": true,
+        "reqLevel": 50,
+        "equip": {
+            "slot": "Waist",
+            "bindsOnEquip": true,
+            "minDamage": 0,
+            "maxDamage": 0,
+            "magicAttack": 0,
+            "healingPower": 0,
+            "equipEffect": "Increases Cooking, Printing, and Husbandry proficiencies +20000.\r\nCan complete actions faster when related actions are completed consecutively.",
+            "petLevel": 0,
+            "maxGrade": 12,
+            "durability": 20,
+            "tempering": true,
+            "stats": [
+                {
+                    "name": "Agility",
+                    "value": 9.972330694736
+                },
+                {
+                    "name": "Stamina",
+                    "value": 14.708496042104
+                },
+                {
+                    "name": "Magic Defense",
+                    "value": 199.83
+                },
+                {
+                    "name": "Physical Defense",
+                    "value": 199.83
+                }
+            ]
+        }
+    },
+    {
+        "id": 35428,
+        "name": "Harani Stone Lantern",
+        "icon": "icon_item_2133",
+        "type": "Furniture",
+        "grade": 1,
+        "description": "Place in a completed house.\r\n\r\nPlacement: yard\r\n\r\nYou can turn the light on or off.\r\nDestroyed if not removed before the building is demolished.",
+        "price": 640,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 38562,
+        "name": "Cottage Stone Partition",
+        "icon": "icon_item_3133",
+        "type": "Furniture",
+        "grade": 1,
+        "description": "Place in a completed house.\r\n\r\nPlacement: house floor or large furniture\r\n\r\nDestroyed if not removed before the building is demolished.",
+        "price": 100,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 43391,
+        "name": "Wrapped Synthesis Stone Pack",
+        "icon": "icon_item_3546",
+        "type": "Cloak Synthesis Materials",
+        "grade": 1,
+        "description": "Unwrap to obtain an |cBLUE|Auroran Synthesis Stone Pack|c|.\r\n\r\nAuroran Synthesis Stone Packs can be used in |cBLUE|cloak synthesis|c|.",
+        "useEffect": "Unwrap Auroran Synthesis Stone Pack.",
+        "price": 10,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": true,
+        "equip": {
+            "slot": "",
+            "minDamage": 0,
+            "maxDamage": 0,
+            "magicAttack": 0,
+            "healingPower": 0,
+            "petLevel": 0,
+            "tempering": true,
+            "stats": []
+        }
+    },
+    {
+        "id": 45908,
+        "name": "Radiant Hiram Awakening Scroll",
+        "icon": "icon_item_4443",
+        "type": "Awakening Materials",
+        "grade": 5,
+        "description": "Used to awaken Radiant Hiram Guardian equipment, unlocking higher item grades and synthesis effects.\r\n\r\nCan only be used on |cBLUE|Radiant Hiram Equipment|c| of |cBLUE|Divine|c| grade or higher.\r\nSuccessful awakening can cause equipment with tempering points above|cORANGE|+20|c| to lose up to|cORANGE|-2|c| points, but won't drop the item below +20.\r\n\r\nFound by killing the |cLIGHT_BLUE|Abyssal Legion|c| in the |cBLUE|Western Hiram Mountains.|c|",
+        "useEffect": "Use |cORANGE|25|c| Hiram Awakening Scroll and |cORANGE|300|c| Labor to awaken a piece of Radiant Hiram Guardian Equipment.",
+        "price": 30,
+        "bindsOnPickup": true,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 46018,
+        "name": "Radiant Runescribe Quill",
+        "icon": "icon_item_4447",
+        "type": "Talisman",
+        "grade": 4,
+        "description": "This is a quill imbued with Hiram knowledge. Can be used on a |cBLUE|Radiant Hiram Awakening Scroll|c| to complete it.",
+        "useEffect": "Use |cORANGE|100 Radiant Hiram Awakening Scrolls|c| and a |cORANGE|Radiant Runescribe Quill|c| to craft a |cORANGE|Blessed Hiram Awakening Scroll.|c|",
+        "price": 25,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 46242,
+        "name": "Radiant Golden Hero Statue",
+        "icon": "icon_item_2758",
+        "type": "Furniture",
+        "grade": 12,
+        "description": "This impressive statue was created by melting 2 Golden Hero Statues and forging them together.\r\n\r\nPlace in a completed house.\r\n\r\nPlacement: house floor, yard, or large furniture\r\nReturned via mail if the building is demolished.\r\n\r\n|cORANGE|Recoverable Decor Limit:|c|\r\n16m x 16m: 40 items\r\n24m x 24m: 80 items",
+        "price": 325,
+        "bindsOnPickup": true,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 46244,
+        "name": "Radiant Bronze Hero Statue",
+        "icon": "icon_item_2760",
+        "type": "Furniture",
+        "grade": 10,
+        "description": "This impressive statue was created by melting 2 Bronze Hero Statues and forging them together.\r\n\r\nPlace in a completed house.\r\n\r\nPlacement: house floor, yard, or large furniture\r\nReturned via mail if the building is demolished.\r\n\r\n|cORANGE|Recoverable Decor Limit:|c|\r\n16m x 16m: 40 items\r\n24m x 24m: 80 items",
+        "price": 110,
+        "bindsOnPickup": true,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 46246,
+        "name": "Radiant Silver Hero Statue",
+        "icon": "icon_item_2759",
+        "type": "Furniture",
+        "grade": 11,
+        "description": "This impressive statue was created by melting 2 Silver Hero Statues and forging them together.\r\n\r\nPlace in a completed house.\r\n\r\nPlacement: house floor, yard, or large furniture\r\nReturned via mail if the building is demolished.\r\n\r\n|cORANGE|Recoverable Decor Limit:|c|\r\n16m x 16m: 40 items\r\n24m x 24m: 80 items",
+        "price": 180,
+        "bindsOnPickup": true,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 47052,
+        "name": "Radiant Hiram Infusion",
+        "icon": "icon_item_4411",
+        "type": "Synthesis Materials",
+        "grade": 3,
+        "description": "A mysteriously powerful infusion.\r\nThe infusions granted are of higher rarity, than the infusionen granted by Mysterious Hiram Infusions.\r\nOpen to reveal the content.",
+        "useEffect": "Spend up to 40 Labor to identify the Radiant Hiram Infusion.\r\nAuto-use: shift+right-click",
+        "price": 200,
+        "bindsOnPickup": true,
+        "overlay": "unidentified",
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 49173,
+        "name": "Radiant Erenor Awakening Scroll",
+        "icon": "icon_item_4855",
+        "type": "Awakening Materials",
+        "grade": 11,
+        "description": "Used to awaken Erenor equipment, unlocking higher stats and synthesis effects.\r\n\r\nCan only be used on |cBLUE|Radiant Erenor Equipment|c| of |cBLUE|Mythic|c| grade or higher.\r\nSuccessful awakening can cause equipment with tempering points above |cORANGE|+20|c| to lose up to |cORANGE|-2|c| points, but won't drop the item below +20.",
+        "useEffect": "Use |cORANGE|1|c| Radiant Erenor Awakening Scroll and |cORANGE|300|c| Labor to awaken a piece of Radiant Erenor Equipment.",
+        "price": 60,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 8000929,
+        "name": "Clear Synthium Stone",
+        "icon": "icon_item_3289",
+        "type": "Synthesis Materials",
+        "grade": 1,
+        "description": "Can be used as a material in |cBLUE|costume and undergarments synthesis|c|.\r\n\r\n|cRED|Grades|c|: |cLIGHT_BLUE|Basic-Grand|c|",
+        "price": 10,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 8000930,
+        "name": "Vivid Synthium Stone",
+        "icon": "icon_item_3290",
+        "type": "Synthesis Materials",
+        "grade": 3,
+        "description": "Can be used as a material in |cBLUE|costume and undergarments synthesis|c|.\r\n\r\n|cRED|Grades|c|: |cLIGHT_BLUE|Rare-Arcane|c|",
+        "price": 20,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 8000931,
+        "name": "Lucid Synthium Stone",
+        "icon": "icon_item_3291",
+        "type": "Synthesis Materials",
+        "grade": 5,
+        "description": "Can be used as a material in |cBLUE|costume and undergarments synthesis|c|.\r\n\r\n|cRED|Grades|c|: |cLIGHT_BLUE|Heroic-Divine|c|",
+        "price": 30,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 8000932,
+        "name": "Radiant Synthium Stone",
+        "icon": "icon_item_3292",
+        "type": "Synthesis Materials",
+        "grade": 9,
+        "description": "Can be used as a material in |cBLUE|costume and undergarment synthesis|c|.\r\n\r\n|cRED|Grades|c|: |cLIGHT_BLUE|Epic-Eternal|c|",
+        "price": 50,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 8000966,
+        "name": "Misagon's Crystal",
+        "icon": "icon_item_3390",
+        "type": "Alchemy",
+        "grade": 1,
+        "description": "Used to craft Lucid Synthium Stones.",
+        "price": 10,
+        "bindsOnPickup": false,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 8000998,
+        "name": "Bound Vivid Synthium Stone",
+        "icon": "icon_item_3290",
+        "type": "Synthesis Materials",
+        "grade": 3,
+        "description": "Can be used as a material in |cBLUE|costume and undergarments synthesis|c|.\r\n\r\n|cRED|Grades|c|: |cLIGHT_BLUE|Rare-Arcane|c|",
+        "price": 20,
+        "bindsOnPickup": true,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 8001099,
+        "name": "Bound Lucid Synthium Stone",
+        "icon": "icon_item_3291",
+        "type": "Synthesis Materials",
+        "grade": 5,
+        "description": "Can be used as a material in |cBLUE|costume and undergarments synthesis|c|.\r\n\r\n|cRED|Grades|c|: |cLIGHT_BLUE|Heroic-Divine|c|",
+        "price": 0,
+        "bindsOnPickup": true,
+        "sealed": false,
+        "salvageable": false
+    },
+    {
+        "id": 8001100,
+        "name": "Bound Radiant Synthium Stone",
+        "icon": "icon_item_3292",
+        "type": "Synthesis Materials",
+        "grade": 9,
+        "description": "Can be used as a material in |cBLUE|costume and undergarment synthesis|c|.\r\n\r\n|cRED|Grades|c|: |cLIGHT_BLUE|Epic-Eternal|c|",
+        "price": 0,
+        "bindsOnPickup": true,
+        "sealed": false,
+        "salvageable": false
+    }
+]

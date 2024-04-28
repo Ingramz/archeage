@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "serverId": 13,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-02-02T11:15:29.000+0000"
+    },
+    {
+        "id": 2,
+        "serverId": 14,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T16:58:41.124+0000"
+    },
+    {
+        "id": 3,
+        "serverId": 15,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T17:26:25.611+0000"
+    },
+    {
+        "id": 4,
+        "serverId": 16,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T17:09:40.189+0000"
+    },
+    {
+        "id": 5,
+        "serverId": 17,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T16:30:08.835+0000"
+    },
+    {
+        "id": 6,
+        "serverId": 18,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T16:14:55.440+0000"
+    },
+    {
+        "id": 7,
+        "serverId": 19,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T17:09:56.678+0000"
+    },
+    {
+        "id": 8,
+        "serverId": 20,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T16:52:11.835+0000"
+    },
+    {
+        "id": 9,
+        "serverId": 21,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T16:47:20.831+0000"
+    },
+    {
+        "id": 10,
+        "serverId": 22,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T16:51:39.144+0000"
+    },
+    {
+        "id": 11,
+        "serverId": 23,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T16:01:17.505+0000"
+    },
+    {
+        "id": 12,
+        "serverId": 24,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T16:40:57.351+0000"
+    },
+    {
+        "id": 13,
+        "serverId": 25,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T16:40:57.351+0000"
+    },
+    {
+        "id": 14,
+        "serverId": 26,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T16:40:57.351+0000"
+    },
+    {
+        "id": 15,
+        "serverId": 27,
+        "port": 4,
+        "duration": "00:06",
+        "timestamp": "2023-01-19T16:40:57.351+0000"
+    }
+]

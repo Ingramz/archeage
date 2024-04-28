@@ -1,0 +1,94 @@
+[
+    {
+        "name": "Husbandry",
+        "group": "Harvesting"
+    },
+    {
+        "name": "Farming",
+        "group": "Harvesting"
+    },
+    {
+        "name": "Fishing",
+        "group": "Harvesting"
+    },
+    {
+        "name": "Logging",
+        "group": "Harvesting"
+    },
+    {
+        "name": "Gathering",
+        "group": "Harvesting"
+    },
+    {
+        "name": "Mining",
+        "group": "Harvesting"
+    },
+    {
+        "name": "Alchemy",
+        "group": "Crafting"
+    },
+    {
+        "name": "Cooking",
+        "group": "Crafting"
+    },
+    {
+        "name": "Handicrafts",
+        "group": "Crafting"
+    },
+    {
+        "name": "Machining",
+        "group": "Crafting"
+    },
+    {
+        "name": "Metalwork",
+        "group": "Crafting"
+    },
+    {
+        "name": "Printing",
+        "group": "Crafting"
+    },
+    {
+        "name": "Masonry",
+        "group": "Crafting"
+    },
+    {
+        "name": "Tailoring",
+        "group": "Crafting"
+    },
+    {
+        "name": "Leatherwork",
+        "group": "Crafting"
+    },
+    {
+        "name": "Weaponry",
+        "group": "Crafting"
+    },
+    {
+        "name": "Carpentry",
+        "group": "Crafting"
+    },
+    {
+        "name": "Construction",
+        "group": "Special"
+    },
+    {
+        "name": "Larceny",
+        "group": "Special"
+    },
+    {
+        "name": "Commerce",
+        "group": "Special"
+    },
+    {
+        "name": "Artistry",
+        "group": "Special"
+    },
+    {
+        "name": "Exploration",
+        "group": "Special"
+    },
+    {
+        "name": "Other",
+        "group": null
+    }
+]

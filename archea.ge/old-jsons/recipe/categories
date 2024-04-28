@@ -1,0 +1,298 @@
+[
+    {
+        "id": 1,
+        "name": "Character Equipment"
+    },
+    {
+        "id": 2,
+        "name": "Head",
+        "parent": 1
+    },
+    {
+        "id": 3,
+        "name": "Chest",
+        "parent": 1
+    },
+    {
+        "id": 4,
+        "name": "Waist",
+        "parent": 1
+    },
+    {
+        "id": 5,
+        "name": "Wrists",
+        "parent": 1
+    },
+    {
+        "id": 6,
+        "name": "Hands",
+        "parent": 1
+    },
+    {
+        "id": 7,
+        "name": "Cloaks",
+        "parent": 1
+    },
+    {
+        "id": 8,
+        "name": "Legs",
+        "parent": 1
+    },
+    {
+        "id": 9,
+        "name": "Feet",
+        "parent": 1
+    },
+    {
+        "id": 10,
+        "name": "Undergarments",
+        "parent": 1
+    },
+    {
+        "id": 11,
+        "name": "Costume",
+        "parent": 1
+    },
+    {
+        "id": 12,
+        "name": "Necklaces",
+        "parent": 1
+    },
+    {
+        "id": 13,
+        "name": "Earrings",
+        "parent": 1
+    },
+    {
+        "id": 14,
+        "name": "Rings",
+        "parent": 1
+    },
+    {
+        "id": 15,
+        "name": "Right-Hand",
+        "parent": 1
+    },
+    {
+        "id": 16,
+        "name": "Left-Hand",
+        "parent": 1
+    },
+    {
+        "id": 17,
+        "name": "Ranged",
+        "parent": 1
+    },
+    {
+        "id": 18,
+        "name": "Instruments",
+        "parent": 1
+    },
+    {
+        "id": 19,
+        "name": "Gliders",
+        "parent": 1
+    },
+    {
+        "id": 20,
+        "name": "Property"
+    },
+    {
+        "id": 21,
+        "name": "Farms & Gardens",
+        "parent": 20
+    },
+    {
+        "id": 22,
+        "name": "Furniture",
+        "parent": 20
+    },
+    {
+        "id": 23,
+        "name": "Construction Mats",
+        "parent": 20
+    },
+    {
+        "id": 24,
+        "name": "Building Management",
+        "parent": 20
+    },
+    {
+        "id": 25,
+        "name": "Pets & Transport"
+    },
+    {
+        "id": 26,
+        "name": "Pets & Mounts",
+        "parent": 25
+    },
+    {
+        "id": 27,
+        "name": "Vehicles",
+        "parent": 25
+    },
+    {
+        "id": 28,
+        "name": "Ships",
+        "parent": 25
+    },
+    {
+        "id": 29,
+        "name": "Sieges & Explosives",
+        "parent": 25
+    },
+    {
+        "id": 30,
+        "name": "Harvesting"
+    },
+    {
+        "id": 31,
+        "name": "Seeds",
+        "parent": 30
+    },
+    {
+        "id": 32,
+        "name": "Saplings",
+        "parent": 30
+    },
+    {
+        "id": 33,
+        "name": "Livestock",
+        "parent": 30
+    },
+    {
+        "id": 34,
+        "name": "Fishing Equipment",
+        "parent": 30
+    },
+    {
+        "id": 35,
+        "name": "Mining Equipment",
+        "parent": 30
+    },
+    {
+        "id": 36,
+        "name": "Blue Salt Brotherhood",
+        "parent": 30
+    },
+    {
+        "id": 37,
+        "name": "Commerce"
+    },
+    {
+        "id": 38,
+        "name": "Nuian Specialties",
+        "parent": 37
+    },
+    {
+        "id": 39,
+        "name": "Haranyan Specialties",
+        "parent": 37
+    },
+    {
+        "id": 40,
+        "name": "Contraptions",
+        "parent": 37
+    },
+    {
+        "id": 41,
+        "name": "Processing"
+    },
+    {
+        "id": 42,
+        "name": "Basic Materials",
+        "parent": 41
+    },
+    {
+        "id": 43,
+        "name": "Pigment/Oil/Polish",
+        "parent": 41
+    },
+    {
+        "id": 44,
+        "name": "Components",
+        "parent": 41
+    },
+    {
+        "id": 45,
+        "name": "Alchemy Materials",
+        "parent": 41
+    },
+    {
+        "id": 46,
+        "name": "Special Materials",
+        "parent": 41
+    },
+    {
+        "id": 47,
+        "name": "Consumables"
+    },
+    {
+        "id": 48,
+        "name": "Equipment Improvements",
+        "parent": 47
+    },
+    {
+        "id": 49,
+        "name": "Common Buffs",
+        "parent": 47
+    },
+    {
+        "id": 50,
+        "name": "Health & Mana",
+        "parent": 47
+    },
+    {
+        "id": 51,
+        "name": "Region-Specific Buffs",
+        "parent": 47
+    },
+    {
+        "id": 52,
+        "name": "Artistry & Festivals"
+    },
+    {
+        "id": 53,
+        "name": "Artistry",
+        "parent": 52
+    },
+    {
+        "id": 54,
+        "name": "Crest Items",
+        "parent": 52
+    },
+    {
+        "id": 55,
+        "name": "Seasonal Festival",
+        "parent": 52
+    },
+    {
+        "id": 56,
+        "name": "Sport Fishing & Blue Ribbon",
+        "parent": 52
+    },
+    {
+        "id": 57,
+        "name": "Events",
+        "parent": 52
+    },
+    {
+        "id": 58,
+        "name": "Homecoming Warrior Event",
+        "parent": 52
+    },
+    {
+        "id": 59,
+        "name": "Other"
+    },
+    {
+        "id": 60,
+        "name": "Greater Dungeon Equipment",
+        "parent": 59
+    },
+    {
+        "id": 61,
+        "name": "Auroria Specialties",
+        "parent": 37
+    }
+]

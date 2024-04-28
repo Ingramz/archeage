@@ -1,0 +1,2298 @@
+[
+    {
+        "name": "Abolisher",
+        "skillsetIds": [
+            4,
+            1,
+            3
+        ]
+    },
+    {
+        "name": "Absolver",
+        "skillsetIds": [
+            6,
+            13,
+            10
+        ]
+    },
+    {
+        "name": "Adept",
+        "skillsetIds": [
+            4,
+            10,
+            12
+        ]
+    },
+    {
+        "name": "Alchemist",
+        "skillsetIds": [
+            13,
+            5,
+            10
+        ]
+    },
+    {
+        "name": "Anchorite",
+        "skillsetIds": [
+            4,
+            5,
+            12
+        ]
+    },
+    {
+        "name": "Animist",
+        "skillsetIds": [
+            8,
+            7,
+            10
+        ]
+    },
+    {
+        "name": "Annihilator",
+        "skillsetIds": [
+            13,
+            5,
+            2
+        ]
+    },
+    {
+        "name": "Anthropomancer",
+        "skillsetIds": [
+            13,
+            7,
+            11
+        ]
+    },
+    {
+        "name": "Arachnomancer",
+        "skillsetIds": [
+            2,
+            5,
+            12
+        ]
+    },
+    {
+        "name": "Arcane Hunter",
+        "skillsetIds": [
+            6,
+            4,
+            2
+        ]
+    },
+    {
+        "name": "Arcanist",
+        "skillsetIds": [
+            4,
+            7,
+            2
+        ]
+    },
+    {
+        "name": "Archon",
+        "skillsetIds": [
+            6,
+            3,
+            2
+        ]
+    },
+    {
+        "name": "Argent",
+        "skillsetIds": [
+            4,
+            1,
+            10
+        ]
+    },
+    {
+        "name": "Assassin",
+        "skillsetIds": [
+            8,
+            10,
+            2
+        ]
+    },
+    {
+        "name": "Astral Ranger",
+        "skillsetIds": [
+            6,
+            4,
+            5
+        ]
+    },
+    {
+        "name": "Athame",
+        "skillsetIds": [
+            9,
+            10,
+            2
+        ]
+    },
+    {
+        "name": "Augmentor",
+        "skillsetIds": [
+            4,
+            8,
+            12
+        ]
+    },
+    {
+        "name": "Augurer",
+        "skillsetIds": [
+            13,
+            7,
+            10
+        ]
+    },
+    {
+        "name": "Avatar",
+        "skillsetIds": [
+            6,
+            8,
+            12
+        ]
+    },
+    {
+        "name": "Banebolt",
+        "skillsetIds": [
+            6,
+            13,
+            5
+        ]
+    },
+    {
+        "name": "Banesong",
+        "skillsetIds": [
+            5,
+            9,
+            11
+        ]
+    },
+    {
+        "name": "Banshee",
+        "skillsetIds": [
+            3,
+            2,
+            12
+        ]
+    },
+    {
+        "name": "Barrelace",
+        "skillsetIds": [
+            6,
+            13,
+            4
+        ]
+    },
+    {
+        "name": "Barricade",
+        "skillsetIds": [
+            3,
+            4,
+            12
+        ]
+    },
+    {
+        "name": "Bastion",
+        "skillsetIds": [
+            6,
+            4,
+            3
+        ]
+    },
+    {
+        "name": "Battlemage",
+        "skillsetIds": [
+            3,
+            5,
+            7
+        ]
+    },
+    {
+        "name": "Battlepriest",
+        "skillsetIds": [
+            1,
+            13,
+            10
+        ]
+    },
+    {
+        "name": "Beguiler",
+        "skillsetIds": [
+            13,
+            9,
+            2
+        ]
+    },
+    {
+        "name": "Blackguard",
+        "skillsetIds": [
+            1,
+            5,
+            10
+        ]
+    },
+    {
+        "name": "Blade Dancer",
+        "skillsetIds": [
+            1,
+            8,
+            9
+        ]
+    },
+    {
+        "name": "Bladechanter",
+        "skillsetIds": [
+            1,
+            9,
+            12
+        ]
+    },
+    {
+        "name": "Blademage",
+        "skillsetIds": [
+            13,
+            7,
+            12
+        ]
+    },
+    {
+        "name": "Bladespell",
+        "skillsetIds": [
+            1,
+            13,
+            7
+        ]
+    },
+    {
+        "name": "Blastfuse",
+        "skillsetIds": [
+            5,
+            7,
+            12
+        ]
+    },
+    {
+        "name": "Blightcaster",
+        "skillsetIds": [
+            10,
+            11,
+            2
+        ]
+    },
+    {
+        "name": "Blightcaster",
+        "skillsetIds": [
+            7,
+            11,
+            2
+        ]
+    },
+    {
+        "name": "Blighter",
+        "skillsetIds": [
+            1,
+            3,
+            8
+        ]
+    },
+    {
+        "name": "Blinkhunter",
+        "skillsetIds": [
+            4,
+            6,
+            12
+        ]
+    },
+    {
+        "name": "Blinkshot",
+        "skillsetIds": [
+            6,
+            7,
+            11
+        ]
+    },
+    {
+        "name": "Blood Arrow",
+        "skillsetIds": [
+            6,
+            5,
+            10
+        ]
+    },
+    {
+        "name": "Bloodmage",
+        "skillsetIds": [
+            13,
+            3,
+            5
+        ]
+    },
+    {
+        "name": "Bloodreaver",
+        "skillsetIds": [
+            4,
+            1,
+            5
+        ]
+    },
+    {
+        "name": "Bloodskald",
+        "skillsetIds": [
+            6,
+            1,
+            9
+        ]
+    },
+    {
+        "name": "Bloodthrall",
+        "skillsetIds": [
+            1,
+            9,
+            10
+        ]
+    },
+    {
+        "name": "Bonechiller",
+        "skillsetIds": [
+            2,
+            9,
+            12
+        ]
+    },
+    {
+        "name": "Bonestalker",
+        "skillsetIds": [
+            6,
+            4,
+            1
+        ]
+    },
+    {
+        "name": "Boneweaver",
+        "skillsetIds": [
+            4,
+            7,
+            10
+        ]
+    },
+    {
+        "name": "Bounty Hunter",
+        "skillsetIds": [
+            13,
+            4,
+            8
+        ]
+    },
+    {
+        "name": "Breathstealer",
+        "skillsetIds": [
+            5,
+            9,
+            12
+        ]
+    },
+    {
+        "name": "Buccaneer",
+        "skillsetIds": [
+            1,
+            13,
+            3
+        ]
+    },
+    {
+        "name": "Bulwark",
+        "skillsetIds": [
+            13,
+            3,
+            5
+        ]
+    },
+    {
+        "name": "Cabalist",
+        "skillsetIds": [
+            3,
+            7,
+            2
+        ]
+    },
+    {
+        "name": "Cannoneer",
+        "skillsetIds": [
+            13,
+            4,
+            12
+        ]
+    },
+    {
+        "name": "Caretaker",
+        "skillsetIds": [
+            3,
+            9,
+            10
+        ]
+    },
+    {
+        "name": "Charmer",
+        "skillsetIds": [
+            13,
+            7,
+            9
+        ]
+    },
+    {
+        "name": "Clairvoyer",
+        "skillsetIds": [
+            13,
+            3,
+            10
+        ]
+    },
+    {
+        "name": "Cleric",
+        "skillsetIds": [
+            4,
+            9,
+            10
+        ]
+    },
+    {
+        "name": "Confessor",
+        "skillsetIds": [
+            8,
+            9,
+            10
+        ]
+    },
+    {
+        "name": "Confutator",
+        "skillsetIds": [
+            13,
+            2,
+            10
+        ]
+    },
+    {
+        "name": "Conjuror",
+        "skillsetIds": [
+            1,
+            11,
+            2
+        ]
+    },
+    {
+        "name": "Corrupter",
+        "skillsetIds": [
+            6,
+            3,
+            11
+        ]
+    },
+    {
+        "name": "Corsair",
+        "skillsetIds": [
+            1,
+            13,
+            9
+        ]
+    },
+    {
+        "name": "Crusader",
+        "skillsetIds": [
+            1,
+            3,
+            7
+        ]
+    },
+    {
+        "name": "Cryptwalker",
+        "skillsetIds": [
+            8,
+            11,
+            12
+        ]
+    },
+    {
+        "name": "Cultist",
+        "skillsetIds": [
+            5,
+            7,
+            10
+        ]
+    },
+    {
+        "name": "Cursebolt",
+        "skillsetIds": [
+            13,
+            3,
+            11
+        ]
+    },
+    {
+        "name": "Cursebrand",
+        "skillsetIds": [
+            1,
+            5,
+            12
+        ]
+    },
+    {
+        "name": "Cyclone",
+        "skillsetIds": [
+            6,
+            13,
+            12
+        ]
+    },
+    {
+        "name": "Daggerspell",
+        "skillsetIds": [
+            8,
+            7,
+            2
+        ]
+    },
+    {
+        "name": "Dark Aegis",
+        "skillsetIds": [
+            3,
+            5,
+            9
+        ]
+    },
+    {
+        "name": "Darkrunner",
+        "skillsetIds": [
+            4,
+            1,
+            8
+        ]
+    },
+    {
+        "name": "Darkseer",
+        "skillsetIds": [
+            4,
+            10,
+            11
+        ]
+    },
+    {
+        "name": "Dawncaller",
+        "skillsetIds": [
+            1,
+            3,
+            9
+        ]
+    },
+    {
+        "name": "Death Prophet",
+        "skillsetIds": [
+            13,
+            11,
+            10
+        ]
+    },
+    {
+        "name": "Death Warden",
+        "skillsetIds": [
+            3,
+            8,
+            10
+        ]
+    },
+    {
+        "name": "Deathchord",
+        "skillsetIds": [
+            9,
+            11,
+            12
+        ]
+    },
+    {
+        "name": "Deathtrigger",
+        "skillsetIds": [
+            6,
+            13,
+            8
+        ]
+    },
+    {
+        "name": "Deathvicar",
+        "skillsetIds": [
+            13,
+            5,
+            4
+        ]
+    },
+    {
+        "name": "Deathwish",
+        "skillsetIds": [
+            1,
+            8,
+            12
+        ]
+    },
+    {
+        "name": "Deceiver",
+        "skillsetIds": [
+            3,
+            9,
+            11
+        ]
+    },
+    {
+        "name": "Defiant",
+        "skillsetIds": [
+            6,
+            13,
+            3
+        ]
+    },
+    {
+        "name": "Defiler",
+        "skillsetIds": [
+            3,
+            5,
+            2
+        ]
+    },
+    {
+        "name": "Demolisher",
+        "skillsetIds": [
+            3,
+            7,
+            12
+        ]
+    },
+    {
+        "name": "Demonologist",
+        "skillsetIds": [
+            5,
+            7,
+            2
+        ]
+    },
+    {
+        "name": "Demonshot",
+        "skillsetIds": [
+            1,
+            13,
+            11
+        ]
+    },
+    {
+        "name": "Dervish",
+        "skillsetIds": [
+            1,
+            10,
+            2
+        ]
+    },
+    {
+        "name": "Destroyer",
+        "skillsetIds": [
+            6,
+            1,
+            7
+        ]
+    },
+    {
+        "name": "Dirgeweaver",
+        "skillsetIds": [
+            1,
+            9,
+            2
+        ]
+    },
+    {
+        "name": "Disciple",
+        "skillsetIds": [
+            8,
+            10,
+            12
+        ]
+    },
+    {
+        "name": "Diviner",
+        "skillsetIds": [
+            13,
+            9,
+            10
+        ]
+    },
+    {
+        "name": "Doombringer",
+        "skillsetIds": [
+            5,
+            8,
+            10
+        ]
+    },
+    {
+        "name": "Doomcaller",
+        "skillsetIds": [
+            5,
+            10,
+            12
+        ]
+    },
+    {
+        "name": "Doomlord",
+        "skillsetIds": [
+            1,
+            3,
+            5
+        ]
+    },
+    {
+        "name": "Doomshot",
+        "skillsetIds": [
+            6,
+            10,
+            11
+        ]
+    },
+    {
+        "name": "Doomskald",
+        "skillsetIds": [
+            13,
+            9,
+            11
+        ]
+    },
+    {
+        "name": "Doomspeaker",
+        "skillsetIds": [
+            7,
+            10,
+            11
+        ]
+    },
+    {
+        "name": "Dourguard",
+        "skillsetIds": [
+            1,
+            3,
+            11
+        ]
+    },
+    {
+        "name": "Dreadbow",
+        "skillsetIds": [
+            6,
+            1,
+            5
+        ]
+    },
+    {
+        "name": "Dreaddart",
+        "skillsetIds": [
+            13,
+            5,
+            12
+        ]
+    },
+    {
+        "name": "Dreadhunter",
+        "skillsetIds": [
+            6,
+            1,
+            2
+        ]
+    },
+    {
+        "name": "Dreadnaught",
+        "skillsetIds": [
+            3,
+            5,
+            8
+        ]
+    },
+    {
+        "name": "Dreadrunner",
+        "skillsetIds": [
+            4,
+            8,
+            11
+        ]
+    },
+    {
+        "name": "Dreadstone",
+        "skillsetIds": [
+            6,
+            3,
+            5
+        ]
+    },
+    {
+        "name": "Dreambreaker",
+        "skillsetIds": [
+            4,
+            3,
+            2
+        ]
+    },
+    {
+        "name": "Dreamspinner",
+        "skillsetIds": [
+            9,
+            10,
+            12
+        ]
+    },
+    {
+        "name": "Druid",
+        "skillsetIds": [
+            6,
+            3,
+            10
+        ]
+    },
+    {
+        "name": "Duskdirge",
+        "skillsetIds": [
+            8,
+            9,
+            12
+        ]
+    },
+    {
+        "name": "Duskraider",
+        "skillsetIds": [
+            13,
+            8,
+            10
+        ]
+    },
+    {
+        "name": "Earthsinger",
+        "skillsetIds": [
+            3,
+            9,
+            7
+        ]
+    },
+    {
+        "name": "Ebonshield",
+        "skillsetIds": [
+            3,
+            7,
+            11
+        ]
+    },
+    {
+        "name": "Ebonsong",
+        "skillsetIds": [
+            6,
+            8,
+            9
+        ]
+    },
+    {
+        "name": "Edgeripper",
+        "skillsetIds": [
+            7,
+            8,
+            12
+        ]
+    },
+    {
+        "name": "Edgewalker",
+        "skillsetIds": [
+            4,
+            5,
+            10
+        ]
+    },
+    {
+        "name": "Eidolon",
+        "skillsetIds": [
+            4,
+            8,
+            2
+        ]
+    },
+    {
+        "name": "Emissary",
+        "skillsetIds": [
+            4,
+            5,
+            11
+        ]
+    },
+    {
+        "name": "Enchantrix",
+        "skillsetIds": [
+            4,
+            9,
+            2
+        ]
+    },
+    {
+        "name": "Enforcer",
+        "skillsetIds": [
+            4,
+            1,
+            7
+        ]
+    },
+    {
+        "name": "Enigmatist",
+        "skillsetIds": [
+            4,
+            8,
+            7
+        ]
+    },
+    {
+        "name": "Equalizer",
+        "skillsetIds": [
+            4,
+            11,
+            2
+        ]
+    },
+    {
+        "name": "Evangelist",
+        "skillsetIds": [
+            5,
+            10,
+            11
+        ]
+    },
+    {
+        "name": "Eviscerator",
+        "skillsetIds": [
+            3,
+            8,
+            12
+        ]
+    },
+    {
+        "name": "Evoker",
+        "skillsetIds": [
+            6,
+            9,
+            7
+        ]
+    },
+    {
+        "name": "Executioner",
+        "skillsetIds": [
+            1,
+            5,
+            8
+        ]
+    },
+    {
+        "name": "Exorcist",
+        "skillsetIds": [
+            4,
+            8,
+            9
+        ]
+    },
+    {
+        "name": "Fanatic",
+        "skillsetIds": [
+            8,
+            7,
+            11
+        ]
+    },
+    {
+        "name": "Fanborn",
+        "skillsetIds": [
+            6,
+            8,
+            11
+        ]
+    },
+    {
+        "name": "Farslayer",
+        "skillsetIds": [
+            6,
+            3,
+            7
+        ]
+    },
+    {
+        "name": "Fatemark",
+        "skillsetIds": [
+            4,
+            11,
+            12
+        ]
+    },
+    {
+        "name": "Fatespinner",
+        "skillsetIds": [
+            9,
+            10,
+            11
+        ]
+    },
+    {
+        "name": "Fearstalker",
+        "skillsetIds": [
+            2,
+            8,
+            12
+        ]
+    },
+    {
+        "name": "Feversong",
+        "skillsetIds": [
+            6,
+            9,
+            11
+        ]
+    },
+    {
+        "name": "Flashblade",
+        "skillsetIds": [
+            4,
+            1,
+            12
+        ]
+    },
+    {
+        "name": "Fleshshaper",
+        "skillsetIds": [
+            1,
+            7,
+            10
+        ]
+    },
+    {
+        "name": "Forsaker",
+        "skillsetIds": [
+            3,
+            5,
+            12
+        ]
+    },
+    {
+        "name": "Freebooter",
+        "skillsetIds": [
+            13,
+            3,
+            12
+        ]
+    },
+    {
+        "name": "Fury Canon",
+        "skillsetIds": [
+            9,
+            11,
+            2
+        ]
+    },
+    {
+        "name": "Fury Mage",
+        "skillsetIds": [
+            8,
+            11,
+            2
+        ]
+    },
+    {
+        "name": "Ghostblade",
+        "skillsetIds": [
+            4,
+            1,
+            11
+        ]
+    },
+    {
+        "name": "Gloomknight",
+        "skillsetIds": [
+            13,
+            3,
+            8
+        ]
+    },
+    {
+        "name": "Gloomspell",
+        "skillsetIds": [
+            7,
+            12,
+            11
+        ]
+    },
+    {
+        "name": "Gloomspell",
+        "skillsetIds": [
+            7,
+            11,
+            12
+        ]
+    },
+    {
+        "name": "Gloomstalker",
+        "skillsetIds": [
+            13,
+            11,
+            8
+        ]
+    },
+    {
+        "name": "Grave Admiral",
+        "skillsetIds": [
+            13,
+            11,
+            12
+        ]
+    },
+    {
+        "name": "Gravebow",
+        "skillsetIds": [
+            5,
+            6,
+            12
+        ]
+    },
+    {
+        "name": "Graveshot",
+        "skillsetIds": [
+            1,
+            13,
+            5
+        ]
+    },
+    {
+        "name": "Gravesinger",
+        "skillsetIds": [
+            6,
+            5,
+            9
+        ]
+    },
+    {
+        "name": "Grimshot",
+        "skillsetIds": [
+            6,
+            11,
+            12
+        ]
+    },
+    {
+        "name": "Gypsy",
+        "skillsetIds": [
+            9,
+            7,
+            10
+        ]
+    },
+    {
+        "name": "Harbinger",
+        "skillsetIds": [
+            1,
+            7,
+            2
+        ]
+    },
+    {
+        "name": "Haruspex",
+        "skillsetIds": [
+            13,
+            5,
+            11
+        ]
+    },
+    {
+        "name": "Heartsbane",
+        "skillsetIds": [
+            6,
+            13,
+            11
+        ]
+    },
+    {
+        "name": "Hellshield",
+        "skillsetIds": [
+            3,
+            11,
+            12
+        ]
+    },
+    {
+        "name": "Hellweaver",
+        "skillsetIds": [
+            1,
+            8,
+            7
+        ]
+    },
+    {
+        "name": "Herald",
+        "skillsetIds": [
+            4,
+            1,
+            9
+        ]
+    },
+    {
+        "name": "Hex Ranger",
+        "skillsetIds": [
+            6,
+            9,
+            2
+        ]
+    },
+    {
+        "name": "Hex Warden",
+        "skillsetIds": [
+            4,
+            1,
+            2
+        ]
+    },
+    {
+        "name": "Hexblade",
+        "skillsetIds": [
+            1,
+            3,
+            2
+        ]
+    },
+    {
+        "name": "Hexbolt",
+        "skillsetIds": [
+            1,
+            13,
+            2
+        ]
+    },
+    {
+        "name": "Hexsniper",
+        "skillsetIds": [
+            13,
+            2,
+            4
+        ]
+    },
+    {
+        "name": "Hierophant",
+        "skillsetIds": [
+            4,
+            10,
+            2
+        ]
+    },
+    {
+        "name": "Honorguard",
+        "skillsetIds": [
+            6,
+            3,
+            9
+        ]
+    },
+    {
+        "name": "Hordebreaker",
+        "skillsetIds": [
+            1,
+            5,
+            2
+        ]
+    },
+    {
+        "name": "Howler",
+        "skillsetIds": [
+            6,
+            4,
+            9
+        ]
+    },
+    {
+        "name": "Immortalist",
+        "skillsetIds": [
+            5,
+            8,
+            12
+        ]
+    },
+    {
+        "name": "Incantator",
+        "skillsetIds": [
+            6,
+            13,
+            7
+        ]
+    },
+    {
+        "name": "Infiltrator",
+        "skillsetIds": [
+            6,
+            8,
+            7
+        ]
+    },
+    {
+        "name": "Inquisitor",
+        "skillsetIds": [
+            1,
+            8,
+            10
+        ]
+    },
+    {
+        "name": "Instigator",
+        "skillsetIds": [
+            4,
+            9,
+            11
+        ]
+    },
+    {
+        "name": "Invader",
+        "skillsetIds": [
+            3,
+            10,
+            11
+        ]
+    },
+    {
+        "name": "Invoker",
+        "skillsetIds": [
+            13,
+            5,
+            7
+        ]
+    },
+    {
+        "name": "Ironsoul",
+        "skillsetIds": [
+            3,
+            11,
+            2
+        ]
+    },
+    {
+        "name": "Jinxmender",
+        "skillsetIds": [
+            2,
+            10,
+            12
+        ]
+    },
+    {
+        "name": "Justicar",
+        "skillsetIds": [
+            3,
+            5,
+            10
+        ]
+    },
+    {
+        "name": "Lamentor",
+        "skillsetIds": [
+            9,
+            7,
+            2
+        ]
+    },
+    {
+        "name": "Leadbiter",
+        "skillsetIds": [
+            13,
+            3,
+            9
+        ]
+    },
+    {
+        "name": "Legionnaire",
+        "skillsetIds": [
+            3,
+            10,
+            12
+        ]
+    },
+    {
+        "name": "Liberator",
+        "skillsetIds": [
+            6,
+            1,
+            3
+        ]
+    },
+    {
+        "name": "Lifestealer",
+        "skillsetIds": [
+            1,
+            10,
+            12
+        ]
+    },
+    {
+        "name": "Lightsoul",
+        "skillsetIds": [
+            6,
+            10,
+            12
+        ]
+    },
+    {
+        "name": "Lorebreaker",
+        "skillsetIds": [
+            1,
+            5,
+            9
+        ]
+    },
+    {
+        "name": "Magister",
+        "skillsetIds": [
+            13,
+            3,
+            7
+        ]
+    },
+    {
+        "name": "Marauder",
+        "skillsetIds": [
+            1,
+            13,
+            8
+        ]
+    },
+    {
+        "name": "Marrowblade",
+        "skillsetIds": [
+            1,
+            10,
+            11
+        ]
+    },
+    {
+        "name": "Mentalist",
+        "skillsetIds": [
+            7,
+            10,
+            12
+        ]
+    },
+    {
+        "name": "Mercenary",
+        "skillsetIds": [
+            1,
+            3,
+            12
+        ]
+    },
+    {
+        "name": "Mindslaver",
+        "skillsetIds": [
+            3,
+            5,
+            11
+        ]
+    },
+    {
+        "name": "Mindslayer",
+        "skillsetIds": [
+            5,
+            11,
+            12
+        ]
+    },
+    {
+        "name": "Minstrel",
+        "skillsetIds": [
+            13,
+            9,
+            4
+        ]
+    },
+    {
+        "name": "Naturalist",
+        "skillsetIds": [
+            6,
+            7,
+            10
+        ]
+    },
+    {
+        "name": "Necromancer",
+        "skillsetIds": [
+            5,
+            10,
+            2
+        ]
+    },
+    {
+        "name": "Nightbearer",
+        "skillsetIds": [
+            3,
+            8,
+            9
+        ]
+    },
+    {
+        "name": "Nightblade",
+        "skillsetIds": [
+            4,
+            3,
+            8
+        ]
+    },
+    {
+        "name": "Nightcloak",
+        "skillsetIds": [
+            4,
+            5,
+            2
+        ]
+    },
+    {
+        "name": "Nighthaunt",
+        "skillsetIds": [
+            13,
+            2,
+            8
+        ]
+    },
+    {
+        "name": "Nightwitch",
+        "skillsetIds": [
+            8,
+            9,
+            2
+        ]
+    },
+    {
+        "name": "Nocturne",
+        "skillsetIds": [
+            5,
+            8,
+            9
+        ]
+    },
+    {
+        "name": "Nullweaver",
+        "skillsetIds": [
+            2,
+            11,
+            12
+        ]
+    },
+    {
+        "name": "Oathsworn",
+        "skillsetIds": [
+            1,
+            9,
+            11
+        ]
+    },
+    {
+        "name": "Oracle",
+        "skillsetIds": [
+            6,
+            4,
+            10
+        ]
+    },
+    {
+        "name": "Outrider",
+        "skillsetIds": [
+            6,
+            1,
+            8
+        ]
+    },
+    {
+        "name": "Paladin",
+        "skillsetIds": [
+            1,
+            3,
+            10
+        ]
+    },
+    {
+        "name": "Phantasm",
+        "skillsetIds": [
+            4,
+            5,
+            9
+        ]
+    },
+    {
+        "name": "Phantom",
+        "skillsetIds": [
+            1,
+            2,
+            12
+        ]
+    },
+    {
+        "name": "Pit Fighter",
+        "skillsetIds": [
+            4,
+            3,
+            11
+        ]
+    },
+    {
+        "name": "Pitfiend",
+        "skillsetIds": [
+            1,
+            11,
+            12
+        ]
+    },
+    {
+        "name": "Planeshifter",
+        "skillsetIds": [
+            4,
+            5,
+            8
+        ]
+    },
+    {
+        "name": "Pontifex",
+        "skillsetIds": [
+            13,
+            4,
+            10
+        ]
+    },
+    {
+        "name": "Poxbane",
+        "skillsetIds": [
+            3,
+            9,
+            2
+        ]
+    },
+    {
+        "name": "Primeval",
+        "skillsetIds": [
+            6,
+            4,
+            8
+        ]
+    },
+    {
+        "name": "Privateer",
+        "skillsetIds": [
+            13,
+            9,
+            8
+        ]
+    },
+    {
+        "name": "Purgator",
+        "skillsetIds": [
+            13,
+            11,
+            4
+        ]
+    },
+    {
+        "name": "Purifier",
+        "skillsetIds": [
+            13,
+            8,
+            12
+        ]
+    },
+    {
+        "name": "Quickdraw",
+        "skillsetIds": [
+            13,
+            9,
+            12
+        ]
+    },
+    {
+        "name": "Ragebinder",
+        "skillsetIds": [
+            1,
+            8,
+            11
+        ]
+    },
+    {
+        "name": "Ragechanter",
+        "skillsetIds": [
+            6,
+            13,
+            2
+        ]
+    },
+    {
+        "name": "Ranger",
+        "skillsetIds": [
+            6,
+            8,
+            10
+        ]
+    },
+    {
+        "name": "Ravager",
+        "skillsetIds": [
+            1,
+            5,
+            7
+        ]
+    },
+    {
+        "name": "Realmshifter",
+        "skillsetIds": [
+            4,
+            7,
+            12
+        ]
+    },
+    {
+        "name": "Reaper",
+        "skillsetIds": [
+            5,
+            8,
+            7
+        ]
+    },
+    {
+        "name": "Reincarnator",
+        "skillsetIds": [
+            10,
+            11,
+            12
+        ]
+    },
+    {
+        "name": "Requiem",
+        "skillsetIds": [
+            5,
+            9,
+            7
+        ]
+    },
+    {
+        "name": "Revelator",
+        "skillsetIds": [
+            13,
+            5,
+            8
+        ]
+    },
+    {
+        "name": "Revenant",
+        "skillsetIds": [
+            4,
+            5,
+            7
+        ]
+    },
+    {
+        "name": "Runebreaker",
+        "skillsetIds": [
+            1,
+            7,
+            12
+        ]
+    },
+    {
+        "name": "Saboteur",
+        "skillsetIds": [
+            5,
+            8,
+            11
+        ]
+    },
+    {
+        "name": "Scion",
+        "skillsetIds": [
+            3,
+            7,
+            10
+        ]
+    },
+    {
+        "name": "Shadehunter",
+        "skillsetIds": [
+            6,
+            5,
+            8
+        ]
+    },
+    {
+        "name": "Shadestriker",
+        "skillsetIds": [
+            6,
+            5,
+            2
+        ]
+    },
+    {
+        "name": "Shadow Prophet",
+        "skillsetIds": [
+            1,
+            7,
+            11
+        ]
+    },
+    {
+        "name": "Shadow Reaper",
+        "skillsetIds": [
+            1,
+            13,
+            12
+        ]
+    },
+    {
+        "name": "Shadowbane",
+        "skillsetIds": [
+            3,
+            10,
+            2
+        ]
+    },
+    {
+        "name": "Shadowblade",
+        "skillsetIds": [
+            1,
+            8,
+            2
+        ]
+    },
+    {
+        "name": "Shadowguard",
+        "skillsetIds": [
+            3,
+            8,
+            11
+        ]
+    },
+    {
+        "name": "Shadowknight",
+        "skillsetIds": [
+            3,
+            8,
+            2
+        ]
+    },
+    {
+        "name": "Shadowsong",
+        "skillsetIds": [
+            8,
+            9,
+            11
+        ]
+    },
+    {
+        "name": "Shaman",
+        "skillsetIds": [
+            7,
+            10,
+            2
+        ]
+    },
+    {
+        "name": "Shroudmaster",
+        "skillsetIds": [
+            5,
+            8,
+            2
+        ]
+    },
+    {
+        "name": "Shroudsong",
+        "skillsetIds": [
+            7,
+            9,
+            12
+        ]
+    },
+    {
+        "name": "Shroudspell",
+        "skillsetIds": [
+            13,
+            7,
+            8
+        ]
+    },
+    {
+        "name": "Skull Warden",
+        "skillsetIds": [
+            13,
+            3,
+            2
+        ]
+    },
+    {
+        "name": "Skullknight",
+        "skillsetIds": [
+            4,
+            3,
+            5
+        ]
+    },
+    {
+        "name": "Soothsayer",
+        "skillsetIds": [
+            4,
+            8,
+            10
+        ]
+    },
+    {
+        "name": "Sorrowsong",
+        "skillsetIds": [
+            5,
+            9,
+            10
+        ]
+    },
+    {
+        "name": "Soulbow",
+        "skillsetIds": [
+            6,
+            10,
+            2
+        ]
+    },
+    {
+        "name": "Soulleech",
+        "skillsetIds": [
+            13,
+            10,
+            12
+        ]
+    },
+    {
+        "name": "Soulsong",
+        "skillsetIds": [
+            6,
+            9,
+            10
+        ]
+    },
+    {
+        "name": "Soulthief",
+        "skillsetIds": [
+            1,
+            5,
+            11
+        ]
+    },
+    {
+        "name": "Spectre",
+        "skillsetIds": [
+            9,
+            7,
+            11
+        ]
+    },
+    {
+        "name": "Spellbinder",
+        "skillsetIds": [
+            13,
+            7,
+            2
+        ]
+    },
+    {
+        "name": "Spellbow",
+        "skillsetIds": [
+            6,
+            5,
+            7
+        ]
+    },
+    {
+        "name": "Spellsinger",
+        "skillsetIds": [
+            8,
+            9,
+            7
+        ]
+    },
+    {
+        "name": "Spellsong",
+        "skillsetIds": [
+            4,
+            9,
+            7
+        ]
+    },
+    {
+        "name": "Spellsword",
+        "skillsetIds": [
+            1,
+            9,
+            7
+        ]
+    },
+    {
+        "name": "Spellweaver",
+        "skillsetIds": [
+            8,
+            10,
+            11
+        ]
+    },
+    {
+        "name": "Spiritualist",
+        "skillsetIds": [
+            4,
+            7,
+            11
+        ]
+    },
+    {
+        "name": "Stone Arrow",
+        "skillsetIds": [
+            6,
+            3,
+            8
+        ]
+    },
+    {
+        "name": "Stormcaster",
+        "skillsetIds": [
+            6,
+            7,
+            2
+        ]
+    },
+    {
+        "name": "Stormchaser",
+        "skillsetIds": [
+            6,
+            4,
+            7
+        ]
+    },
+    {
+        "name": "Swiftshot",
+        "skillsetIds": [
+            6,
+            1,
+            12
+        ]
+    },
+    {
+        "name": "Swiftstone",
+        "skillsetIds": [
+            3,
+            8,
+            7
+        ]
+    },
+    {
+        "name": "Synergist",
+        "skillsetIds": [
+            4,
+            9,
+            12
+        ]
+    },
+    {
+        "name": "Tempest",
+        "skillsetIds": [
+            6,
+            13,
+            9
+        ]
+    },
+    {
+        "name": "Templar",
+        "skillsetIds": [
+            4,
+            3,
+            10
+        ]
+    },
+    {
+        "name": "Thaumaturge",
+        "skillsetIds": [
+            4,
+            3,
+            7
+        ]
+    },
+    {
+        "name": "Tomb Warden",
+        "skillsetIds": [
+            4,
+            3,
+            9
+        ]
+    },
+    {
+        "name": "Tombcaller",
+        "skillsetIds": [
+            5,
+            9,
+            2
+        ]
+    },
+    {
+        "name": "Tombsong",
+        "skillsetIds": [
+            13,
+            5,
+            9
+        ]
+    },
+    {
+        "name": "Trickster",
+        "skillsetIds": [
+            6,
+            8,
+            2
+        ]
+    },
+    {
+        "name": "Twistedshot",
+        "skillsetIds": [
+            2,
+            6,
+            12
+        ]
+    },
+    {
+        "name": "Vanguard",
+        "skillsetIds": [
+            3,
+            9,
+            12
+        ]
+    },
+    {
+        "name": "Venombite",
+        "skillsetIds": [
+            13,
+            2,
+            12
+        ]
+    },
+    {
+        "name": "Visonary",
+        "skillsetIds": [
+            6,
+            4,
+            11
+        ]
+    },
+    {
+        "name": "Voidstalker",
+        "skillsetIds": [
+            6,
+            11,
+            2
+        ]
+    },
+    {
+        "name": "Voidwalker",
+        "skillsetIds": [
+            13,
+            11,
+            2
+        ]
+    },
+    {
+        "name": "Warcaster",
+        "skillsetIds": [
+            13,
+            7,
+            4
+        ]
+    },
+    {
+        "name": "Warpriest",
+        "skillsetIds": [
+            6,
+            1,
+            10
+        ]
+    },
+    {
+        "name": "Widowhaunt",
+        "skillsetIds": [
+            6,
+            13,
+            1
+        ]
+    },
+    {
+        "name": "Wildclaw",
+        "skillsetIds": [
+            6,
+            5,
+            11
+        ]
+    },
+    {
+        "name": "Wildmage",
+        "skillsetIds": [
+            2,
+            7,
+            12
+        ]
+    },
+    {
+        "name": "Windseeker",
+        "skillsetIds": [
+            6,
+            1,
+            11
+        ]
+    },
+    {
+        "name": "Windshaper",
+        "skillsetIds": [
+            6,
+            7,
+            12
+        ]
+    },
+    {
+        "name": "Windsoul",
+        "skillsetIds": [
+            3,
+            6,
+            12
+        ]
+    },
+    {
+        "name": "Wispwalker",
+        "skillsetIds": [
+            4,
+            2,
+            12
+        ]
+    },
+    {
+        "name": "Witch Doctor",
+        "skillsetIds": [
+            5,
+            11,
+            2
+        ]
+    },
+    {
+        "name": "Wrathslayer",
+        "skillsetIds": [
+            1,
+            13,
+            4
+        ]
+    },
+    {
+        "name": "Zealot",
+        "skillsetIds": [
+            5,
+            7,
+            11
+        ]
+    },
+    {
+        "name": "Zephyr",
+        "skillsetIds": [
+            6,
+            9,
+            12
+        ]
+    }
+]
