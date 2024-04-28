@@ -1,0 +1,45 @@
+From 868266f13fb5319fee253858eda71ab499fbeed9 Mon Sep 17 00:00:00 2001
+From: Indrek Ardel <indrek@ardel.eu>
+Date: Tue, 12 Dec 2023 10:11:19 +0200
+Subject: [PATCH] Add ArcheAge customizations
+
+---
+ src/unluac/parse/LConstantType.java | 4 +++-
+ src/unluac/parse/LHeaderType.java   | 7 ++++---
+ 2 files changed, 7 insertions(+), 4 deletions(-)
+
+diff --git a/src/unluac/parse/LConstantType.java b/src/unluac/parse/LConstantType.java
+index 9f6f141..b7e19e5 100644
+--- a/src/unluac/parse/LConstantType.java
++++ b/src/unluac/parse/LConstantType.java
+@@ -51,9 +51,11 @@ public LObject parse(ByteBuffer buffer, BHeader header) {
+       case 1:
+         return header.bool.parse(buffer, header);
+       case 3:
+-        return header.number.parse(buffer, header);
++        return header.lfloat.parse(buffer, header);
+       case 4:
+         return header.string.parse(buffer, header);
++      case 254:
++        return header.linteger.parse(buffer, header);
+       default:
+         throw new IllegalStateException();
+     }
+diff --git a/src/unluac/parse/LHeaderType.java b/src/unluac/parse/LHeaderType.java
+index 67359e5..55a0553 100644
+--- a/src/unluac/parse/LHeaderType.java
++++ b/src/unluac/parse/LHeaderType.java
+@@ -340,9 +340,10 @@ protected void parse_main(ByteBuffer buffer, BHeader header, LHeaderParseState s
+     parse_int_size(buffer, header, s);
+     parse_size_t_size(buffer, header, s);
+     parse_instruction_size(buffer, header, s);
+-    parse_number_size(buffer, header, s);
+-    parse_number_integrality(buffer, header, s);
+-    s.number = new LNumberType(s.lNumberSize, s.lNumberIntegrality, LNumberType.NumberMode.MODE_NUMBER);
++    parse_integer_size(buffer, header, s);
++    parse_float_size(buffer, header, s);
++    s.linteger = new LNumberType(s.lIntegerSize, true, LNumberType.NumberMode.MODE_INTEGER);
++    s.lfloat = new LNumberType(s.lFloatSize, false, LNumberType.NumberMode.MODE_FLOAT);
+   }
+   
+   @Override
