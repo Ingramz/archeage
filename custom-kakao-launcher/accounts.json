@@ -1,0 +1,14 @@
+{
+    "main": {
+        "username": "test@example.com",
+        "password": "p455w0rd"
+    },
+    "alt1": {
+        "username": "alt1@example.com",
+        "password": "asdasdasdasdasd"
+    },
+    "alt2": {
+        "username": "alt1@example.com",
+        "password": "$ecre7"
+    }
+}
