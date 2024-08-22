@@ -9,6 +9,10 @@ Requirements:
   * ScyllaHide - used for getting past antidebugger
   * dotx64dbg - used for exiting x64dbg at the end
 
+## ⚠️ Update: 22.08.2024 ⚠️
+
+It appears that ArcheWorld (and presumably also ArcheAge) is now loading the first part of XIGNCODE3 module earlier in the game's startup process, which restricts accessing game's memory once the database has been extracted. You can use the xigncode-bypass provided in this repository to circumvent this. Rest of the instructions remain the same.
+
 ## Demo
 
 [Video on YouTube](https://www.youtube.com/watch?v=QluhuvCu5p8)
